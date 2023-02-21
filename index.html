@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ivacker Music &#127926;">
+    <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>&#127926; Music - Ivacker Reproductor MP3 Online</title>
+
+    <style>
+        body {
+          font-family: 'Roboto', sans-serif;
+        }
+      </style>
+
+</head>
+
+<body>
+    <center>
+    <h1>Ivacker &#127926; Music</h1>
+    <button id="play-button">Play</button>
+    <button id="previous-button">Previous</button>
+    <button id="next-button">Next</button>
+    <button id="shuffle-button">Shuffle</button>
+    <br>
+    <br>
+
+    <audio id="audio" controls>
+        <source src="" type="audio/mpeg">
+    </audio>
+    <br>
+    <label id="song-title"></label>
+    <script>
+        const songs = [
+            {{range .}}
+            {name: "{{.Nombre}}", url: "{{.URL}}"},
+            {{end}}
+        ];
+
+        const audio = document.querySelector('#audio');
+        const playButton = document.querySelector('#play-button');
+        const previousButton = document.querySelector('#previous-button');
+        const nextButton = document.querySelector('#next-button');
+        const shuffleButton = document.querySelector('#shuffle-button');
+        const songTitle = document.querySelector('#song-title');
+
+        let currentSongIndex = 0;
+        let shuffle = false;
+
+        function playSong() {
+            if (shuffle) {
+                currentSongIndex = Math.floor(Math.random() * songs.length);
+            }
+
+            if (currentSongIndex < songs.length) {
+                const song = songs[currentSongIndex];
+                audio.src = song.url;
+                audio.play();
+                songTitle.textContent = song.name;
+                currentSongIndex++;
+            } else {
+                currentSongIndex = 0;
+            }
+        }
+
+        playButton.addEventListener('click', () => {
+            playSong();
+        });
+
+        previousButton.addEventListener('click', () => {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentSongIndex = songs.length - 1;
+            }
+            playSong();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            playSong();
+        });
+
+        shuffleButton.addEventListener('click', () => {
+            shuffle = !shuffle;
+        });
+
+        audio.addEventListener('ended', () => {
+            playSong();
+        });
+    </script>
+</body>
+</center>
+</html>
