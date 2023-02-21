@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ivacker Music &#127926;">
     <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
-    
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Radio en vivo, programas on demand y podcast."/><style type="text/css">
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GOTHAMLIGHT.TTF');
+          font-display: swap;
+        }
+      
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GOTHAMMEDIUM.TTF');
+          font-weight: medium;
+          font-display: swap;
+        }
+      
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GothamBlack.otf');
+          font-weight: bold;
+          font-display: swap;
+        }
+      </style><link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
+      <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     
-    <script src="jsmediatags.min.js"></script>
+    <script src="/js/jsmediatags.min.js"></script>
+     <!-- Scripts -->
+        <script src="https://platform-static.cdn.mdstrm.com/js/player_api.js"></script>
+        <script type="text/javascript" src="https://player.cdn.mdstrm.com/lightning_player/api.js" defer="defer"></script>
+        <script type="text/javascript" src="https://platform-static.cdn.mdstrm.com/client/embed-federation/sdk.js" defer ></script>
 
-    <title>&#127926; Music - Ivacker Reproductor MP3 Online</title>
+
+    <title>&#127926; Music - Ivacker Reproductor Online</title>
 
     <style>
         body {
@@ -19,28 +46,52 @@
             background-color: black;
             color: white;
         }
+
+         #play-button {
+      font-size: 20px;
+    }
+    
+    #previous-button {
+      font-size: 20px;
+    }
+    
+    #next-button {
+      font-size: 20px;
+    }
+    
+    #shuffle-button {
+      font-size: 20px;
+    }
       </style>
 
 </head>
 
 <body>
     <center>
-    <h1>Ivacker &#127926; Music</h1>
-    <button id="play-button">Play</button>
-    <button id="previous-button">Previous</button>
-    <button id="next-button">Next</button>
-    <button id="shuffle-button">Shuffle</button>
+    <!-- <h2>Ivacker &#127926; Radio</h2> -->
+    
+    <br>
+    <h2 id="song-artista"></h2>
+    <br>
+    <h3 id="song-title"></h3>
+    
+    <br>
+    <br>
+    
+    <button id="play-button">▶</button>
+    <button id="previous-button"><strong><<</strong></button>
+    <button id="next-button"><strong>>></strong></button>
+    <button id="shuffle-button"><strong>⇅</strong></button>
+    
     <br>
     <br>
 
     <audio id="audio" controls>
         <source src="" type="audio/mpeg">
     </audio>
+
     <br>
     <br>
-    <strong><label id="song-artista"></label></strong>
-    <br>
-    <label id="song-title"></label>
     <script>
         const jsmediatags = window.jsmediatags
 
@@ -73,11 +124,13 @@
                 audio.src = song.url;
                 audio.play();                
                 currentSongIndex++;
-                songTitle.textContent = "Reproduciendo "+ songs.length + " canciones";
+                songArtista.textContent="Cargando..."
+                songTitle.textContent = song.name;
                 
-                jsmediatags.read("http://music.ivacker.xyz/mp3/" + song.name, {
+                jsmediatags.read("http://music.ivacker.xyz/mp3/"+song.name, {
                     onSuccess: function(tag) {
                     console.log(tag)
+                    document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;
                     songArtista.textContent = tag.tags.artist;
                     songTitle.textContent = "🎶 "+ tag.tags.title +" 🎶";
                         },
@@ -118,7 +171,8 @@
         audio.addEventListener('ended', () => {
             playSong();
         });
-    </script>
+
+      </script>
 </body>
 </center>
 </html>
