@@ -8,6 +8,9 @@
     <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    
+    <script src="jsmediatags.min.js"></script>
+
     <title>&#127926; Music - Ivacker Reproductor MP3 Online</title>
 
     <style>
@@ -34,8 +37,13 @@
         <source src="" type="audio/mpeg">
     </audio>
     <br>
+    <br>
+    <strong><label id="song-artista"></label></strong>
+    <br>
     <label id="song-title"></label>
     <script>
+        const jsmediatags = window.jsmediatags
+
         const songs = [
             {{range .}}
             {name: "{{.Nombre}}", url: "{{.URL}}"},
@@ -48,23 +56,38 @@
         const nextButton = document.querySelector('#next-button');
         const shuffleButton = document.querySelector('#shuffle-button');
         const songTitle = document.querySelector('#song-title');
+        const songArtista = document.querySelector('#song-artista');
 
         let currentSongIndex = 0;
         let shuffle = false;
 
         function playSong() {
+
             if (shuffle) {
                 currentSongIndex = Math.floor(Math.random() * songs.length);
             }
 
             if (currentSongIndex < songs.length) {
                 const song = songs[currentSongIndex];
+
                 audio.src = song.url;
-                audio.play();
-                songTitle.textContent = song.name;
+                audio.play();                
                 currentSongIndex++;
+                songTitle.textContent = "Reproduciendo "+ songs.length + " canciones";
+                
+                jsmediatags.read("http://music.ivacker.xyz/mp3/" + song.name, {
+                    onSuccess: function(tag) {
+                    console.log(tag)
+                    songArtista.textContent = tag.tags.artist;
+                    songTitle.textContent = "🎶 "+ tag.tags.title +" 🎶";
+                        },
+                    onError: function(error) {
+                    console.log(error)
+                    }
+                })  
+
             } else {
-                currentSongIndex = 0;
+                currentSongIndex = 23;
             }
         }
 
