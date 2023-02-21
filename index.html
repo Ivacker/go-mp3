@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ivacker Music &#127926;">
+    <meta name="description" content="Ivacker Reproducto Online MP3 &#127926; - Es un reproducto web creado con Golang.">
     <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
     <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Radio en vivo, programas on demand y podcast."/><style type="text/css">
         @font-face {
@@ -26,7 +26,8 @@
           font-weight: bold;
           font-display: swap;
         }
-      </style><link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
+      </style>
+      <link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
       <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
@@ -62,6 +63,15 @@
     #shuffle-button {
       font-size: 20px;
     }
+
+    #song-artista {
+    font-weight: bold;
+    color: #8f8f8f;
+  }
+
+  #song-title {
+    color: #fcfcfc;
+  }
       </style>
 
 </head>
@@ -117,7 +127,7 @@
             if (shuffle) {
                 currentSongIndex = Math.floor(Math.random() * songs.length);
             }
-
+                
             if (currentSongIndex < songs.length) {
                 const song = songs[currentSongIndex];
 
@@ -127,12 +137,19 @@
                 songArtista.textContent="Cargando..."
                 songTitle.textContent = song.name;
                 
-                jsmediatags.read("http://music.ivacker.xyz/mp3/"+song.name, {
+                jsmediatags.read("http://mp3.ivacker.xyz/mp3/"+song.name, {
                     onSuccess: function(tag) {
                     console.log(tag)
                     document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;
                     songArtista.textContent = tag.tags.artist;
                     songTitle.textContent = "🎶 "+ tag.tags.title +" 🎶";
+
+                        if (typeof tag.tags.title === 'undefined') {
+                        songArtista.textContent = "🎶";
+                        songTitle.textContent = song.name;
+                        document.title="🎶 "+ song.name;
+                        }
+
                         },
                     onError: function(error) {
                     console.log(error)
