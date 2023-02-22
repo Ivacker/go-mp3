@@ -27,17 +27,11 @@
           font-display: swap;
         }
       </style>
-      <link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
-      <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+      
+        <link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
+        <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">        
     
     <script src="/js/jsmediatags.min.js"></script>
-     <!-- Scripts -->
-        <script src="https://platform-static.cdn.mdstrm.com/js/player_api.js"></script>
-        <script type="text/javascript" src="https://player.cdn.mdstrm.com/lightning_player/api.js" defer="defer"></script>
-        <script type="text/javascript" src="https://platform-static.cdn.mdstrm.com/client/embed-federation/sdk.js" defer ></script>
-
 
     <title>&#127926; Music - Ivacker Reproductor Online</title>
 
@@ -72,6 +66,12 @@
   #song-title {
     color: #fcfcfc;
   }
+
+  #info-lista {
+    color: #3f3f3f;
+    font-size: 12px;
+  }
+
       </style>
 
 </head>
@@ -83,6 +83,7 @@
     <br>
     <h2 id="song-artista"></h2>
     <br>
+
     <h3 id="song-title"></h3>
     
     <br>
@@ -102,6 +103,10 @@
 
     <br>
     <br>
+    <p id="info-lista">Canciones disponibles.</label>
+    <br>
+    <br>
+
     <script>
         const jsmediatags = window.jsmediatags
 
@@ -118,9 +123,15 @@
         const shuffleButton = document.querySelector('#shuffle-button');
         const songTitle = document.querySelector('#song-title');
         const songArtista = document.querySelector('#song-artista');
+        const infoLista = document.querySelector('#info-lista');
 
         let currentSongIndex = 0;
         let shuffle = false;
+
+        document.title="🎶 "+ songs.length +" canciones listas para escuchar."
+        songArtista.textContent= songs.length +" canciones disponibles."
+        songTitle.textContent = "Pulsa play y disfruta...🎶";
+        infoLista.textContent= "Playlist de "+ songs.length +" canciones."
 
         function playSong() {
 
@@ -137,7 +148,7 @@
                 songArtista.textContent="Cargando..."
                 songTitle.textContent = song.name;
                 
-                jsmediatags.read("http://mp3.ivacker.xyz/mp3/"+song.name, {
+                jsmediatags.read("https://mp3.ivacker.xyz/mp3/"+song.name, {
                     onSuccess: function(tag) {
                     console.log(tag)
                     document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;

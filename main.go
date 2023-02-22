@@ -8,9 +8,15 @@ import (
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/gorilla/handlers"
 )
 
 func main() {
+
+	header := handlers.AllowedHeaders([]string{"X-Requested-With", "Content-Type", "Authorization"})
+	methods := handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS"})
+	origins := handlers.AllowedOrigins([]string{"*"})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
@@ -54,8 +60,17 @@ func main() {
 	assetsFS := http.FileServer(http.Dir("p:/evolmusic/js/"))
 	http.Handle("/js/", http.StripPrefix("/js/", assetsFS))
 
-	fmt.Println("Servidor web iniciado...")
-	http.ListenAndServe(":80", nil)
+	//SSL
+	//C:\Certbot\live\mp3.ivacker.xyz\fullchain.pem
+
+	//go http.ListenAndServe(":80", nil)
+
+	err1 := http.ListenAndServeTLS(":443", "C:/Certbot/live/mp3.ivacker.xyz/fullchain.pem", "C:/Certbot/live/mp3.ivacker.xyz/privkey.pem", handlers.CORS(header, methods, origins)(http.DefaultServeMux)) // SSL (Utilizo certificado para SSL)
+	fmt.Println("Servidor 443...")
+	if err1 != nil {
+		fmt.Print(err1)
+	}
+
 }
 
 type cancion struct {
@@ -92,4 +107,16 @@ func renderTemplate(w http.ResponseWriter, canciones []cancion) {
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
+}
+
+func redirectToHTTPSHandler(domain string) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "https://"+domain+r.RequestURI, http.StatusMovedPermanently)
+	}
+}
+
+func mainHandler(w http.ResponseWriter, r *http.Request) {
+
+	redirectToHTTPSHandler("https://mp3.ivacker.xyz")(w, r)
+
 }
