@@ -44,21 +44,20 @@
 
          #play-button {
           font-size: 20px;
-      border: none;
-   background-color: black; 
-  color: rgb(67, 67, 67);
-  padding: 0;
-  margin: 0;
-  background-image: url('https://toppng.com/uploads/preview/lay-png-free-download-play-button-icon-11563024010invs8nth7t.png');
+            border: none;
+            background-color: black;
+            color: rgb(67, 67, 67);
+            padding: 0;
+            margin: 0;
     }
     
     #previous-button {
       font-size: 20px;
       border: none;
-  background-color: black;
-  color: rgb(67, 67, 67);
-  padding: 0;
-  margin: 0;
+      background-color: black;
+      color: rgb(67, 67, 67);
+      padding: 0;
+      margin: 0;
     }
     
     #next-button {
@@ -91,6 +90,11 @@
   #info-lista {
     color: #3f3f3f;
     font-size: 12px;
+  }
+
+  #info-ivacker {
+    color: #3f3f3f;
+    font-size: 10px;
   }
 
   #audio::-webkit-media-controls {
@@ -128,28 +132,28 @@
     <br>
     <h2 id="song-artista"></h2>
     <br>
-
-    <h3 id="song-title"></h3>
-    
+    <br>
+    <h3 id="song-title"></h3>    
     <br>
     <br>
     
-    <button id="play-button"></button>
-    <button id="previous-button"><strong> &#9194; </strong></button>
-    <button id="next-button"><strong> &#9193; </strong></button>
-    <button id="shuffle-button"><strong></strong></button>
+    <button id="play-button">▶ </button>
+    <button id="previous-button"></button>
+    <button id="next-button">☯</button>
+    <button id="shuffle-button"></button>
     
     <br>
     <br>
 
     <audio id="audio" controls>
-        <source src="" type="audio/mpeg">
+        <source src="mp3/16877a41c37b4207baa50800e9aa7148.mp3" type="audio/mpeg">
     </audio>
 
     <br>
     <br>
-    <p id="info-lista">Canciones disponibles.</label>
+    <p id="info-lista">Canciones disponibles.</p>
     <br>
+    <strong><p id="info-ivacker">con 🖤 de IvackerDev</p></strong>
     <br>
 
     <script>
@@ -169,11 +173,12 @@
         const songTitle = document.querySelector('#song-title');
         const songArtista = document.querySelector('#song-artista');
         const infoLista = document.querySelector('#info-lista');
+        const infoIvacker = document.querySelector('#info-ivacker');
 
         let currentSongIndex = 0;
-        let shuffle = false;
+        let shuffle = true;
 
-        document.title="🎶 "+ songs.length +" canciones listas para escuchar."
+        document.title="🖤 "+ songs.length +" canciones listas para escuchar."
         songArtista.textContent= songs.length +" canciones disponibles."
         songTitle.textContent = "Pulsa play y disfruta...🎶";
         infoLista.textContent= "Playlist de "+ songs.length +" canciones."
@@ -193,7 +198,7 @@
                 songArtista.textContent="Cargando..."
                 songTitle.textContent = song.name;
                 
-                jsmediatags.read("https://mp3.ivacker.xyz/mp3/"+song.name, {
+                jsmediatags.read("https://mp3.ivacker.dev/mp3/"+song.name, {
                     onSuccess: function(tag) {
                     console.log(tag)
                     document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;
