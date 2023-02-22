@@ -43,19 +43,40 @@
         }
 
          #play-button {
-      font-size: 20px;
+          font-size: 20px;
+      border: none;
+   background-color: black; 
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
+  background-image: url('https://toppng.com/uploads/preview/lay-png-free-download-play-button-icon-11563024010invs8nth7t.png');
     }
     
     #previous-button {
       font-size: 20px;
+      border: none;
+  background-color: black;
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
     }
     
     #next-button {
       font-size: 20px;
+      border: none;
+  background-color: black;
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
     }
     
     #shuffle-button {
       font-size: 20px;
+      border: none;
+  background-color: black;
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
     }
 
     #song-artista {
@@ -71,6 +92,30 @@
     color: #3f3f3f;
     font-size: 12px;
   }
+
+  #audio::-webkit-media-controls {
+  color: black;
+}
+
+#audio::-webkit-media-controls-start-playback-button {
+  color: black;
+}
+
+#audio::-webkit-media-controls-enclosure {
+  background-color: black;
+}
+
+#audio::-webkit-media-controls-panel {
+  background-color: rgb(45, 45, 45);
+}
+
+.button-with-image {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  border: none;
+}
+
 
       </style>
 
@@ -89,10 +134,10 @@
     <br>
     <br>
     
-    <button id="play-button">▶</button>
-    <button id="previous-button"><strong><<</strong></button>
-    <button id="next-button"><strong>>></strong></button>
-    <button id="shuffle-button"><strong>⇅</strong></button>
+    <button id="play-button"></button>
+    <button id="previous-button"><strong> &#9194; </strong></button>
+    <button id="next-button"><strong> &#9193; </strong></button>
+    <button id="shuffle-button"><strong></strong></button>
     
     <br>
     <br>
