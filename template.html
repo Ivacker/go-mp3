@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ivacker Reproducto Online MP3 &#127926; - Es un reproducto web creado con Golang.">
+    <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Radio en vivo, programas on demand y podcast."/><style type="text/css">
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GOTHAMLIGHT.TTF');
+          font-display: swap;
+        }
+      
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GOTHAMMEDIUM.TTF');
+          font-weight: medium;
+          font-display: swap;
+        }
+      
+        @font-face {
+          font-family: 'GOTHAMLIGHT';
+          src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GothamBlack.otf');
+          font-weight: bold;
+          font-display: swap;
+        }
+      </style>
+      
+        <link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
+        <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">        
+    
+    <script src="/music/js/jsmediatags.min.js"></script>
+
+    <title>&#127926; Music - Ivacker Reproductor Online</title>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+         #play-button {
+          font-size: 20px;
+            border: none;
+            background-color: black;
+            color: rgb(67, 67, 67);
+            padding: 0;
+            margin: 0;
+    }
+    
+    #previous-button {
+      font-size: 20px;
+      border: none;
+      background-color: black;
+      color: rgb(67, 67, 67);
+      padding: 0;
+      margin: 0;
+    }
+    
+    #next-button {
+      font-size: 20px;
+      border: none;
+  background-color: black;
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
+    }
+    
+    #shuffle-button {
+      font-size: 20px;
+      border: none;
+  background-color: black;
+  color: rgb(67, 67, 67);
+  padding: 0;
+  margin: 0;
+    }
+
+    #song-artista {
+    font-weight: bold;
+    color: #8f8f8f;
+  }
+
+  #song-title {
+    color: #fcfcfc;
+  }
+
+  #info-lista {
+    color: #3f3f3f;
+    font-size: 12px;
+  }
+
+  #info-ivacker {
+    color: #3f3f3f;
+    font-size: 10px;
+  }
+
+  #audio::-webkit-media-controls {
+  color: black;
+}
+
+#audio::-webkit-media-controls-start-playback-button {
+  color: black;
+}
+
+#audio::-webkit-media-controls-enclosure {
+  background-color: black;
+}
+
+#audio::-webkit-media-controls-panel {
+  background-color: rgb(45, 45, 45);
+}
+
+.button-with-image {
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+  border: none;
+}
+
+
+      </style>
+
+</head>
+
+<body>
+    <center>
+    <!-- <h2>Ivacker &#127926; Radio</h2> -->
+    
+    <br>
+    <h2 id="song-artista"></h2>
+    <br>
+    <br>
+    <h3 id="song-title"></h3>    
+    <br>
+    <br>
+    
+    <button id="play-button">▶ </button>
+    <button id="previous-button"></button>
+    <button id="next-button">☯</button>
+    <button id="shuffle-button"></button>
+    
+    <br>
+    <br>
+
+    <audio id="audio" controls>
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <br>
+    <br>
+    <p id="info-lista">Canciones disponibles.</p>
+    <br>
+    <strong><p id="info-ivacker">con 🖤 de IvackerDev</p></strong>
+    <br>
+
+    <script>
+        const jsmediatags = window.jsmediatags
+
+        const songs = [
+            {{range .}}
+            {name: "{{.Nombre}}", url: "{{.URL}}"},
+            {{end}}
+        ];
+
+        const audio = document.querySelector('#audio');
+        const playButton = document.querySelector('#play-button');
+        const previousButton = document.querySelector('#previous-button');
+        const nextButton = document.querySelector('#next-button');
+        const shuffleButton = document.querySelector('#shuffle-button');
+        const songTitle = document.querySelector('#song-title');
+        const songArtista = document.querySelector('#song-artista');
+        const infoLista = document.querySelector('#info-lista');
+        const infoIvacker = document.querySelector('#info-ivacker');
+
+        let currentSongIndex = 0;
+        let shuffle = true;
+
+        document.title="🖤 "+ songs.length +" canciones listas para escuchar."
+        songArtista.textContent= songs.length +" canciones disponibles."
+        songTitle.textContent = "Pulsa play y disfruta...🎶";
+        infoLista.textContent= "Playlist de "+ songs.length +" canciones."
+
+        function playSong() {
+
+            if (shuffle) {
+                currentSongIndex = Math.floor(Math.random() * songs.length);
+            }
+                
+            if (currentSongIndex < songs.length) {
+                const song = songs[currentSongIndex];
+
+                audio.src = song.url;
+                audio.play();                
+                currentSongIndex++;
+                songArtista.textContent="Cargando..."
+                songTitle.textContent = song.name;
+                
+                jsmediatags.read("https://evol.cl/music/mp3/"+song.name, {
+                    onSuccess: function(tag) {
+                    console.log(tag)
+                    document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;
+                    songArtista.textContent = tag.tags.artist;
+                    songTitle.textContent = "🎶 "+ tag.tags.title +" 🎶";
+
+                        if (typeof tag.tags.title === 'undefined') {
+                        songArtista.textContent = "🎶";
+                        songTitle.textContent = song.name;
+                        document.title="🎶 "+ song.name;
+                        }
+
+                        },
+                    onError: function(error) {
+                    console.log(error)
+                    }
+                })  
+
+            } else {
+                currentSongIndex = 23;
+            }
+        }
+
+        playButton.addEventListener('click', () => {
+            playSong();
+        });
+
+        previousButton.addEventListener('click', () => {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentSongIndex = songs.length - 1;
+            }
+            playSong();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            playSong();
+        });
+
+        shuffleButton.addEventListener('click', () => {
+            shuffle = !shuffle;
+        });
+
+        audio.addEventListener('ended', () => {
+            playSong();
+        });
+
+      </script>
+</body>
+</center>
+</html>

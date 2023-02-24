@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"html/template"
+	"io"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
@@ -18,38 +21,23 @@ func main() {
 	methods := handlers.AllowedMethods([]string{"GET", "POST", "PUT", "HEAD", "OPTIONS"})
 	origins := handlers.AllowedOrigins([]string{"*"})
 
+	http.HandleFunc("/generar", func(w http.ResponseWriter, r *http.Request) {
+
+		canciones, err := listarCanciones()
+		modificarHTML("index.html", canciones)
+
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+
+	})
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-		if r.URL.Path == "/" {
-			canciones, err := listarCanciones()
-			if err != nil {
-				http.Error(w, err.Error(), http.StatusInternalServerError)
-				return
-			}
-
-			// Si se proporcionó un parámetro en la URL, reproducir esa canción primero
-			if cancionParam := r.URL.Query().Get("cancion"); cancionParam != "" {
-				cancionPath := "P:/evolmusic/mp3/" + cancionParam
-
-				// Servir el archivo de la canción solicitada
-				http.ServeFile(w, r, cancionPath)
-
-				// Esperar a que la canción termine de reproducirse antes de continuar
-				// la lista de reproducción
-				time.Sleep(time.Second)
-			}
-
-			renderTemplate(w, canciones)
-			return
-		}
-
 		filePath := r.URL.Path[1:]
-
-		if _, err := os.Stat(filePath); os.IsNotExist(err) {
-			http.NotFound(w, r)
-			return
-		}
 		http.ServeFile(w, r, filePath)
+
 	})
 
 	// Ruta base para la carpeta public
@@ -61,10 +49,6 @@ func main() {
 	http.Handle("/js/", http.StripPrefix("/js/", assetsFS))
 
 	//SSL
-	//C:\Certbot\live\mp3.ivacker.xyz\fullchain.pem
-
-	//go http.ListenAndServe(":80", nil)
-
 	err1 := http.ListenAndServeTLS(":443", "C:/Certbot/live/mp3.ivacker.dev/fullchain.pem", "C:/Certbot/live/mp3.ivacker.dev/privkey.pem", handlers.CORS(header, methods, origins)(http.DefaultServeMux)) // SSL (Utilizo certificado para SSL)
 	fmt.Println("Servidor 443...")
 	if err1 != nil {
@@ -87,7 +71,7 @@ func listarCanciones() ([]cancion, error) {
 			return err
 		}
 		if !info.IsDir() {
-			canciones = append(canciones, cancion{Nombre: info.Name(), URL: "/mp3/" + info.Name()})
+			canciones = append(canciones, cancion{Nombre: info.Name(), URL: "/music/mp3/" + info.Name()})
 		}
 		return nil
 	})
@@ -109,14 +93,41 @@ func renderTemplate(w http.ResponseWriter, canciones []cancion) {
 	}
 }
 
-func redirectToHTTPSHandler(domain string) http.HandlerFunc {
-	return func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "https://"+domain+r.RequestURI, http.StatusMovedPermanently)
+func copiarTemplate() {
+
+	// Abrir el archivo de origen en modo lectura
+	origen, err := os.Open("template.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer origen.Close()
+
+	// Crear el archivo de destino en modo escritura
+	destino, err := os.Create("index.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer destino.Close()
+
+	// Copiar los datos del archivo de origen al archivo de destino
+	_, err = io.Copy(destino, origen)
+	if err != nil {
+		log.Fatal(err)
 	}
 }
+func modificarHTML(sArchivo string, canciones []cancion) {
 
-func mainHandler(w http.ResponseWriter, r *http.Request) {
+	copiarTemplate()
 
-	redirectToHTTPSHandler("https://mp3.ivacker.xyz")(w, r)
+	// Aplicar la plantilla
+	tmpl := template.Must(template.ParseFiles(sArchivo))
+	var buf bytes.Buffer
+	if err := tmpl.Execute(&buf, canciones); err != nil {
+		panic(err)
+	}
 
+	// Escribir el resultado de la plantilla en el archivo
+	if err := os.WriteFile("index.html", buf.Bytes(), 0644); err != nil {
+		panic(err)
+	}
 }

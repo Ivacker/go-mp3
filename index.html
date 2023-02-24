@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ivacker Reproducto Online MP3 &#127926; - Es un reproducto web creado con Golang.">
     <meta name="keywords" content="ivacker dev, musica, reproductor mp3, reproductor online, reproductor mp3 golang">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/>
-    
-    <style type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Radio en vivo, programas on demand y podcast."/><style type="text/css">
         @font-face {
           font-family: 'GOTHAMLIGHT';
           src: url('https://ott-assets.mdstrm.com/5c58a34e176c2c0813b22e4b/633db501b938191960de607d/assets/GOTHAMLIGHT.TTF');
@@ -33,7 +31,7 @@
         <link href="https://next-core.mdstrm.com/3.9.36/static/css/45.aecdc51f.chunk.css" rel="stylesheet">
         <link href="https://next-core.mdstrm.com/3.9.36/static/css/main.c4d030d6.chunk.css" rel="stylesheet">        
     
-    <script src="/js/jsmediatags.min.js"></script>
+    <script src="/music/js/jsmediatags.min.js"></script>
 
     <title>&#127926; Music - Ivacker Reproductor Online</title>
 
@@ -129,7 +127,7 @@
 
 <body>
     <center>
-    <!-- <h2>Ivacker &#127926; Radio</h2> -->
+    
     
     <br>
     <h2 id="song-artista"></h2>
@@ -148,9 +146,8 @@
     <br>
 
     <audio id="audio" controls>
-        <source src="fs/16877a41c37b4207baa50800e9aa7148.mp3" type="audio/mp3">
+        <source src="" type="audio/mpeg">
     </audio>
-    
 
     <br>
     <br>
@@ -163,9 +160,1095 @@
         const jsmediatags = window.jsmediatags
 
         const songs = [
-            {{range .}}
-            {name: "{{.Nombre}}", url: "{{.URL}}"},
-            {{end}}
+            
+            {name: "3b40b8f32bef5ae2380d89761131a924.mp3", url: "\/music\/mp3\/3b40b8f32bef5ae2380d89761131a924.mp3"},
+            
+            {name: "27320d0b86b1bdc56c62ba9f059762fb.mp3", url: "\/music\/mp3\/27320d0b86b1bdc56c62ba9f059762fb.mp3"},
+            
+            {name: "bfa7f75d9330b11991a178a6273f4c0d.mp3", url: "\/music\/mp3\/bfa7f75d9330b11991a178a6273f4c0d.mp3"},
+            
+            {name: "6c4c1efafa273e535944720167a93bec.mp3", url: "\/music\/mp3\/6c4c1efafa273e535944720167a93bec.mp3"},
+            
+            {name: "4699ee260782718412b6549d93ae1c30.mp3", url: "\/music\/mp3\/4699ee260782718412b6549d93ae1c30.mp3"},
+            
+            {name: "Toto - Rosanna.mp3", url: "\/music\/mp3\/Toto - Rosanna.mp3"},
+            
+            {name: "350813e11f60082fde7b26abfecc80e9.mp3", url: "\/music\/mp3\/350813e11f60082fde7b26abfecc80e9.mp3"},
+            
+            {name: "450803c8f30225c3149dda140a283b92.mp3", url: "\/music\/mp3\/450803c8f30225c3149dda140a283b92.mp3"},
+            
+            {name: "Pharrell Williams - Happy (Official Music Video).mp3", url: "\/music\/mp3\/Pharrell Williams - Happy (Official Music Video).mp3"},
+            
+            {name: "a976f8a3b5547b95c01f02132cc88660.mp3", url: "\/music\/mp3\/a976f8a3b5547b95c01f02132cc88660.mp3"},
+            
+            {name: "Eddie Vedder Society Subtitulado (Into the Wild).mp3", url: "\/music\/mp3\/Eddie Vedder Society Subtitulado (Into the Wild).mp3"},
+            
+            {name: "489efa2d2dfbcabb39d07ac67eedb345.mp3", url: "\/music\/mp3\/489efa2d2dfbcabb39d07ac67eedb345.mp3"},
+            
+            {name: "0c8e1eb356f7dc1273ae02514646e527.mp3", url: "\/music\/mp3\/0c8e1eb356f7dc1273ae02514646e527.mp3"},
+            
+            {name: "c414ffdf1e22402b4270ea699f35811e.mp3", url: "\/music\/mp3\/c414ffdf1e22402b4270ea699f35811e.mp3"},
+            
+            {name: "2d98d522e76c25facf884de76aa39f70.mp3", url: "\/music\/mp3\/2d98d522e76c25facf884de76aa39f70.mp3"},
+            
+            {name: "5f70b8ff929638d293df5ff2f6c00e34.mp3", url: "\/music\/mp3\/5f70b8ff929638d293df5ff2f6c00e34.mp3"},
+            
+            {name: "348772e360b4f69e1969b18b5599209c.mp3", url: "\/music\/mp3\/348772e360b4f69e1969b18b5599209c.mp3"},
+            
+            {name: "1d3e9fcf2ecef48a791a12c753bd1aad.mp3", url: "\/music\/mp3\/1d3e9fcf2ecef48a791a12c753bd1aad.mp3"},
+            
+            {name: "1bc057a1ae70186df1052e581e1b8396.mp3", url: "\/music\/mp3\/1bc057a1ae70186df1052e581e1b8396.mp3"},
+            
+            {name: "02d0823b9baba8535d9c3f25d350fb7d.mp3", url: "\/music\/mp3\/02d0823b9baba8535d9c3f25d350fb7d.mp3"},
+            
+            {name: "Eminem - Cleanin\u0027 Out My Closet.mp3", url: "\/music\/mp3\/Eminem - Cleanin\u0027 Out My Closet.mp3"},
+            
+            {name: "cdf27a07d91243df67daf4b865af49b2.mp3", url: "\/music\/mp3\/cdf27a07d91243df67daf4b865af49b2.mp3"},
+            
+            {name: "206b5f20d2c3538a2231e004619db05e.mp3", url: "\/music\/mp3\/206b5f20d2c3538a2231e004619db05e.mp3"},
+            
+            {name: "59eeb02e5ad9d1d0218dedddd061e577.mp3", url: "\/music\/mp3\/59eeb02e5ad9d1d0218dedddd061e577.mp3"},
+            
+            {name: "0be939040a18fa14f2693a3c2192ef99.mp3", url: "\/music\/mp3\/0be939040a18fa14f2693a3c2192ef99.mp3"},
+            
+            {name: "UB40 - Red Red Wine (2002 Digital Remaster).mp3", url: "\/music\/mp3\/UB40 - Red Red Wine (2002 Digital Remaster).mp3"},
+            
+            {name: "796d41802f5808f30494ecc06bf50b73.mp3", url: "\/music\/mp3\/796d41802f5808f30494ecc06bf50b73.mp3"},
+            
+            {name: "9b9d389782c274b91410b80ee1804e30.mp3", url: "\/music\/mp3\/9b9d389782c274b91410b80ee1804e30.mp3"},
+            
+            {name: "Ancud - Así es Normal (lyric video).mp3", url: "\/music\/mp3\/Ancud - Así es Normal (lyric video).mp3"},
+            
+            {name: "2de76dafb922ba01d1486df447a9495c.mp3", url: "\/music\/mp3\/2de76dafb922ba01d1486df447a9495c.mp3"},
+            
+            {name: "Candlebox - Far Behind.mp3", url: "\/music\/mp3\/Candlebox - Far Behind.mp3"},
+            
+            {name: "78e972037a4db40303eb36c70efcb1da.mp3", url: "\/music\/mp3\/78e972037a4db40303eb36c70efcb1da.mp3"},
+            
+            {name: "a42e27bb7ccba9c9692eee2b7dd86984.mp3", url: "\/music\/mp3\/a42e27bb7ccba9c9692eee2b7dd86984.mp3"},
+            
+            {name: "a84457e2346d183696e4adc083027d7d.mp3", url: "\/music\/mp3\/a84457e2346d183696e4adc083027d7d.mp3"},
+            
+            {name: "c1aee4469cc8d53aa02a01d2e6a18fce.mp3", url: "\/music\/mp3\/c1aee4469cc8d53aa02a01d2e6a18fce.mp3"},
+            
+            {name: "Pink Floyd - Another Brick In The Wall (HQ).mp3", url: "\/music\/mp3\/Pink Floyd - Another Brick In The Wall (HQ).mp3"},
+            
+            {name: "1e9019f155fcf78d528c1486a8101e18.mp3", url: "\/music\/mp3\/1e9019f155fcf78d528c1486a8101e18.mp3"},
+            
+            {name: "dbe4d818e43431457f027c4dd6ef2ca1.mp3", url: "\/music\/mp3\/dbe4d818e43431457f027c4dd6ef2ca1.mp3"},
+            
+            {name: "5cdcc2d6d5ef54d7015a887dc6ba57fb.mp3", url: "\/music\/mp3\/5cdcc2d6d5ef54d7015a887dc6ba57fb.mp3"},
+            
+            {name: "Eminem - Lose Yourself [HD].mp3", url: "\/music\/mp3\/Eminem - Lose Yourself [HD].mp3"},
+            
+            {name: "7439e9b4d67d7eedb3ea31756ececeaa.mp3", url: "\/music\/mp3\/7439e9b4d67d7eedb3ea31756ececeaa.mp3"},
+            
+            {name: "cacde83f066270d7b280da6e15665341.mp3", url: "\/music\/mp3\/cacde83f066270d7b280da6e15665341.mp3"},
+            
+            {name: "06fbd4e535c3e16c3dd5aa8a5c5fa537.mp3", url: "\/music\/mp3\/06fbd4e535c3e16c3dd5aa8a5c5fa537.mp3"},
+            
+            {name: "8e9b60d6712374030f31a9e9add4b34e.mp3", url: "\/music\/mp3\/8e9b60d6712374030f31a9e9add4b34e.mp3"},
+            
+            {name: "9dc8ebee619ee1c56ebc098da0370f6b.mp3", url: "\/music\/mp3\/9dc8ebee619ee1c56ebc098da0370f6b.mp3"},
+            
+            {name: "Camouflage Love is a Shield Subtitulado.(HD).mp3", url: "\/music\/mp3\/Camouflage Love is a Shield Subtitulado.(HD).mp3"},
+            
+            {name: "d218ce4fd3480df878e3b2ca87515bfa.mp3", url: "\/music\/mp3\/d218ce4fd3480df878e3b2ca87515bfa.mp3"},
+            
+            {name: "40008667fc654b6d15ac55f4a6e8c514.mp3", url: "\/music\/mp3\/40008667fc654b6d15ac55f4a6e8c514.mp3"},
+            
+            {name: "6c0d83ba68142a0a0d6f99e73a590bce.mp3", url: "\/music\/mp3\/6c0d83ba68142a0a0d6f99e73a590bce.mp3"},
+            
+            {name: "2f69575d01c25275ddd12416d5854431.mp3", url: "\/music\/mp3\/2f69575d01c25275ddd12416d5854431.mp3"},
+            
+            {name: "7a9f61a7b8cd1148ff83bb24ee9a14ba.mp3", url: "\/music\/mp3\/7a9f61a7b8cd1148ff83bb24ee9a14ba.mp3"},
+            
+            {name: "1bdaee174ef9bc075eca9b8e56323efe.mp3", url: "\/music\/mp3\/1bdaee174ef9bc075eca9b8e56323efe.mp3"},
+            
+            {name: "7504f4d5a0a283076dfa7d30de3c8263.mp3", url: "\/music\/mp3\/7504f4d5a0a283076dfa7d30de3c8263.mp3"},
+            
+            {name: "602213b373a941f8249b3a7fdf1b4bc2.mp3", url: "\/music\/mp3\/602213b373a941f8249b3a7fdf1b4bc2.mp3"},
+            
+            {name: "89b5dfbd849cef88fde8b8ac71e778b4.mp3", url: "\/music\/mp3\/89b5dfbd849cef88fde8b8ac71e778b4.mp3"},
+            
+            {name: "182b9f9aed40f254640da91ca96c82ae.mp3", url: "\/music\/mp3\/182b9f9aed40f254640da91ca96c82ae.mp3"},
+            
+            {name: "2ca7a01f4acf61946e9a94e7a292a9b9.mp3", url: "\/music\/mp3\/2ca7a01f4acf61946e9a94e7a292a9b9.mp3"},
+            
+            {name: "046e99db1d50ff03a78064b89f832246.mp3", url: "\/music\/mp3\/046e99db1d50ff03a78064b89f832246.mp3"},
+            
+            {name: "93f7d2d72897261f9e122895dd746028.mp3", url: "\/music\/mp3\/93f7d2d72897261f9e122895dd746028.mp3"},
+            
+            {name: "The Doors People Are Strange.mp3", url: "\/music\/mp3\/The Doors People Are Strange.mp3"},
+            
+            {name: "4f1f862c2e39891588a81646e6dcdf59.mp3", url: "\/music\/mp3\/4f1f862c2e39891588a81646e6dcdf59.mp3"},
+            
+            {name: "5efd724fbbf328f47b7b13b05a0c80d1.mp3", url: "\/music\/mp3\/5efd724fbbf328f47b7b13b05a0c80d1.mp3"},
+            
+            {name: "49c96806eb2e386010b77af5789d665a.mp3", url: "\/music\/mp3\/49c96806eb2e386010b77af5789d665a.mp3"},
+            
+            {name: "6dbfd71200cd68a32ca860ae924f9106.mp3", url: "\/music\/mp3\/6dbfd71200cd68a32ca860ae924f9106.mp3"},
+            
+            {name: "0b3973cbdb70918be02d9e93ba57f3fc.mp3", url: "\/music\/mp3\/0b3973cbdb70918be02d9e93ba57f3fc.mp3"},
+            
+            {name: "89637713c7597e7eccdaea3ef8f06a09.mp3", url: "\/music\/mp3\/89637713c7597e7eccdaea3ef8f06a09.mp3"},
+            
+            {name: "Stone Temple Pilots - Creep (Official Video).mp3", url: "\/music\/mp3\/Stone Temple Pilots - Creep (Official Video).mp3"},
+            
+            {name: "Soundgarden - Black Hole Sun.mp3", url: "\/music\/mp3\/Soundgarden - Black Hole Sun.mp3"},
+            
+            {name: "99377334a7d676735607c3011b56ab1e.mp3", url: "\/music\/mp3\/99377334a7d676735607c3011b56ab1e.mp3"},
+            
+            {name: "2406bbed25cb2d9ff75db9a9c5972800.mp3", url: "\/music\/mp3\/2406bbed25cb2d9ff75db9a9c5972800.mp3"},
+            
+            {name: "0287ac47555a58b0c53ea8ee1a27c338.mp3", url: "\/music\/mp3\/0287ac47555a58b0c53ea8ee1a27c338.mp3"},
+            
+            {name: "88560be9f466777dbf8bbfa4c80b9547.mp3", url: "\/music\/mp3\/88560be9f466777dbf8bbfa4c80b9547.mp3"},
+            
+            {name: "Oasis - Stop Crying Your Heart Out.mp3", url: "\/music\/mp3\/Oasis - Stop Crying Your Heart Out.mp3"},
+            
+            {name: "74a134eb06c1cf3b4bf24282aa7d0e0d.mp3", url: "\/music\/mp3\/74a134eb06c1cf3b4bf24282aa7d0e0d.mp3"},
+            
+            {name: "9a99f097cca1e7eaa827e38d1a677600.mp3", url: "\/music\/mp3\/9a99f097cca1e7eaa827e38d1a677600.mp3"},
+            
+            {name: "b26d7210206e846bcf1862cb889d4c40.mp3", url: "\/music\/mp3\/b26d7210206e846bcf1862cb889d4c40.mp3"},
+            
+            {name: "52f384d9ef26b6f3122b905898eaf1c3.mp3", url: "\/music\/mp3\/52f384d9ef26b6f3122b905898eaf1c3.mp3"},
+            
+            {name: "4ce98e76483b07323edcb3defd4fe794.mp3", url: "\/music\/mp3\/4ce98e76483b07323edcb3defd4fe794.mp3"},
+            
+            {name: "39e06b0ba284bfcaa9d9cdf4aa2b125b.mp3", url: "\/music\/mp3\/39e06b0ba284bfcaa9d9cdf4aa2b125b.mp3"},
+            
+            {name: "8209affdfc048b701821dbf6ca9d17f2.mp3", url: "\/music\/mp3\/8209affdfc048b701821dbf6ca9d17f2.mp3"},
+            
+            {name: "51dd44435222100524d2e33db7fc3143.mp3", url: "\/music\/mp3\/51dd44435222100524d2e33db7fc3143.mp3"},
+            
+            {name: "Michelle - Gerard Lenorman.mp3", url: "\/music\/mp3\/Michelle - Gerard Lenorman.mp3"},
+            
+            {name: "514e0f6632ea38832f9f820067fe02a0.mp3", url: "\/music\/mp3\/514e0f6632ea38832f9f820067fe02a0.mp3"},
+            
+            {name: "2e706e309c52bf649eca22df8e1a9703.mp3", url: "\/music\/mp3\/2e706e309c52bf649eca22df8e1a9703.mp3"},
+            
+            {name: "aa8f290c6aa5e2990c767c49901d1602.mp3", url: "\/music\/mp3\/aa8f290c6aa5e2990c767c49901d1602.mp3"},
+            
+            {name: "Candlebox - You.mp3", url: "\/music\/mp3\/Candlebox - You.mp3"},
+            
+            {name: "Faith No More - Easy (Official Music Video).mp3", url: "\/music\/mp3\/Faith No More - Easy (Official Music Video).mp3"},
+            
+            {name: "49bbafa94cd8d8611a2ad71130b518a9.mp3", url: "\/music\/mp3\/49bbafa94cd8d8611a2ad71130b518a9.mp3"},
+            
+            {name: "b317a6f7712fe245d96ca567951bc7b9.mp3", url: "\/music\/mp3\/b317a6f7712fe245d96ca567951bc7b9.mp3"},
+            
+            {name: "d95289f09988c8e164a2d86930d74b91.mp3", url: "\/music\/mp3\/d95289f09988c8e164a2d86930d74b91.mp3"},
+            
+            {name: "b0cc8528e9f5ffd02bd494dc5439363c.mp3", url: "\/music\/mp3\/b0cc8528e9f5ffd02bd494dc5439363c.mp3"},
+            
+            {name: "8c7b61b3add4fd4f0b8723353244fd52.mp3", url: "\/music\/mp3\/8c7b61b3add4fd4f0b8723353244fd52.mp3"},
+            
+            {name: "5daf2c421cbfbee45bb1e8e5947e86b4.mp3", url: "\/music\/mp3\/5daf2c421cbfbee45bb1e8e5947e86b4.mp3"},
+            
+            {name: "3245f11a5ca71ece66a50d6461f65e93.mp3", url: "\/music\/mp3\/3245f11a5ca71ece66a50d6461f65e93.mp3"},
+            
+            {name: "938d6149bcdf5bbc06c0c2417c18324c.mp3", url: "\/music\/mp3\/938d6149bcdf5bbc06c0c2417c18324c.mp3"},
+            
+            {name: "The Beatles - Don\u0027t Let Me Down.mp3", url: "\/music\/mp3\/The Beatles - Don\u0027t Let Me Down.mp3"},
+            
+            {name: "Coldplay NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/Coldplay NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "INXS - Never Tear Us Apart.mp3", url: "\/music\/mp3\/INXS - Never Tear Us Apart.mp3"},
+            
+            {name: "4ed6ac6911cfe8da7449cbc290a4620b.mp3", url: "\/music\/mp3\/4ed6ac6911cfe8da7449cbc290a4620b.mp3"},
+            
+            {name: "6fd560a734540adb85de24cc5dfb0f0f.mp3", url: "\/music\/mp3\/6fd560a734540adb85de24cc5dfb0f0f.mp3"},
+            
+            {name: "0143d796eea5fd6802ba3ec8e3ea7223.mp3", url: "\/music\/mp3\/0143d796eea5fd6802ba3ec8e3ea7223.mp3"},
+            
+            {name: "a3e4f138fc08f3a19f1d9c291a26cd1d.mp3", url: "\/music\/mp3\/a3e4f138fc08f3a19f1d9c291a26cd1d.mp3"},
+            
+            {name: "615263a1405a1d3b1252013dc8878b2f.mp3", url: "\/music\/mp3\/615263a1405a1d3b1252013dc8878b2f.mp3"},
+            
+            {name: "1d6ac71df02d7eb4e95f370158731a8a.mp3", url: "\/music\/mp3\/1d6ac71df02d7eb4e95f370158731a8a.mp3"},
+            
+            {name: "bfca7ef9c5c568e00cc2b891266e7045.mp3", url: "\/music\/mp3\/bfca7ef9c5c568e00cc2b891266e7045.mp3"},
+            
+            {name: "13b8057a218e152046d8dc5ba69f024e.mp3", url: "\/music\/mp3\/13b8057a218e152046d8dc5ba69f024e.mp3"},
+            
+            {name: "553819b09ae556007bac750b50dc1880.mp3", url: "\/music\/mp3\/553819b09ae556007bac750b50dc1880.mp3"},
+            
+            {name: "0ed510fbdec1caa31e58ec4bcd75eb19.mp3", url: "\/music\/mp3\/0ed510fbdec1caa31e58ec4bcd75eb19.mp3"},
+            
+            {name: "39ed83f3d8ccff104206f044569f9925.mp3", url: "\/music\/mp3\/39ed83f3d8ccff104206f044569f9925.mp3"},
+            
+            {name: "2d23d2dcc38ffde5143dabb07b581259.mp3", url: "\/music\/mp3\/2d23d2dcc38ffde5143dabb07b581259.mp3"},
+            
+            {name: "dad5b639dfc9c469c8e6c71863713d3a.mp3", url: "\/music\/mp3\/dad5b639dfc9c469c8e6c71863713d3a.mp3"},
+            
+            {name: "18446625def6ec432bfc920043846cf3.mp3", url: "\/music\/mp3\/18446625def6ec432bfc920043846cf3.mp3"},
+            
+            {name: "1c9d5c1a913221818299e92faa496abb.mp3", url: "\/music\/mp3\/1c9d5c1a913221818299e92faa496abb.mp3"},
+            
+            {name: "cfc97e4563af12d67a98260acbe610be.mp3", url: "\/music\/mp3\/cfc97e4563af12d67a98260acbe610be.mp3"},
+            
+            {name: "3dad8fd0afb2e2a36cfc6f6463db7182.mp3", url: "\/music\/mp3\/3dad8fd0afb2e2a36cfc6f6463db7182.mp3"},
+            
+            {name: "Jamiroquai - Cosmic Girl.mp3", url: "\/music\/mp3\/Jamiroquai - Cosmic Girl.mp3"},
+            
+            {name: "Green Valley - Bailando al Son del Mar (Ft Rapsusklei) [Hijos de la Tierra 2014].mp3", url: "\/music\/mp3\/Green Valley - Bailando al Son del Mar (Ft Rapsusklei) [Hijos de la Tierra 2014].mp3"},
+            
+            {name: "75913162ac12461215fbfa345e3aca39.mp3", url: "\/music\/mp3\/75913162ac12461215fbfa345e3aca39.mp3"},
+            
+            {name: "9e303d19db44bf2343ae1eaae1506f92.mp3", url: "\/music\/mp3\/9e303d19db44bf2343ae1eaae1506f92.mp3"},
+            
+            {name: "8605ca86192b78a6c23019a1642518d8.mp3", url: "\/music\/mp3\/8605ca86192b78a6c23019a1642518d8.mp3"},
+            
+            {name: "025eb065512ffccc67e616082d18d189.mp3", url: "\/music\/mp3\/025eb065512ffccc67e616082d18d189.mp3"},
+            
+            {name: "4d5115deb808458b50c2ec8cc5191745.mp3", url: "\/music\/mp3\/4d5115deb808458b50c2ec8cc5191745.mp3"},
+            
+            {name: "b6e759f259e2ede662b98c9455902fa6.mp3", url: "\/music\/mp3\/b6e759f259e2ede662b98c9455902fa6.mp3"},
+            
+            {name: "81b6d0564cc7e4e12e5864c02428328c.mp3", url: "\/music\/mp3\/81b6d0564cc7e4e12e5864c02428328c.mp3"},
+            
+            {name: "4deeb3ed6dee3972b58d2451a0e1c43c.mp3", url: "\/music\/mp3\/4deeb3ed6dee3972b58d2451a0e1c43c.mp3"},
+            
+            {name: "3fd1fc69adef6ae795e756f3e7f22c6b.mp3", url: "\/music\/mp3\/3fd1fc69adef6ae795e756f3e7f22c6b.mp3"},
+            
+            {name: "Guns N\u0027 Roses - Patience.mp3", url: "\/music\/mp3\/Guns N\u0027 Roses - Patience.mp3"},
+            
+            {name: "41bcabd80336a3ecb8cd6a41f8409160.mp3", url: "\/music\/mp3\/41bcabd80336a3ecb8cd6a41f8409160.mp3"},
+            
+            {name: "3a5ee75695935013f9b4c3d183643d36.mp3", url: "\/music\/mp3\/3a5ee75695935013f9b4c3d183643d36.mp3"},
+            
+            {name: "8ffc04b74344168e0be676d303f56667.mp3", url: "\/music\/mp3\/8ffc04b74344168e0be676d303f56667.mp3"},
+            
+            {name: "bef5490be9a2ea0083d054d208acbb94.mp3", url: "\/music\/mp3\/bef5490be9a2ea0083d054d208acbb94.mp3"},
+            
+            {name: "51adf2e4087bd814ccc50042bcec1eec.mp3", url: "\/music\/mp3\/51adf2e4087bd814ccc50042bcec1eec.mp3"},
+            
+            {name: "The Animals  - The House of the Rising Sun  (La Casa del Sol Naciente).mp3", url: "\/music\/mp3\/The Animals  - The House of the Rising Sun  (La Casa del Sol Naciente).mp3"},
+            
+            {name: "Imagine Dragons - Demons.mp3", url: "\/music\/mp3\/Imagine Dragons - Demons.mp3"},
+            
+            {name: "bfdef1d4bb4ce4d95838565776c5222d.mp3", url: "\/music\/mp3\/bfdef1d4bb4ce4d95838565776c5222d.mp3"},
+            
+            {name: "5379415d742bea27ff3eb12290bee9bf.mp3", url: "\/music\/mp3\/5379415d742bea27ff3eb12290bee9bf.mp3"},
+            
+            {name: "Por Fin Te Encontré - Cali y el Dandee.mp3", url: "\/music\/mp3\/Por Fin Te Encontré - Cali y el Dandee.mp3"},
+            
+            {name: "a277b49886f17eb2c2cf4feee8b65d2f.mp3", url: "\/music\/mp3\/a277b49886f17eb2c2cf4feee8b65d2f.mp3"},
+            
+            {name: "5d93a6013508f31ae8733b4a7e5187c8.mp3", url: "\/music\/mp3\/5d93a6013508f31ae8733b4a7e5187c8.mp3"},
+            
+            {name: "c6cb82ef663c4da931642c78595e4ad5.mp3", url: "\/music\/mp3\/c6cb82ef663c4da931642c78595e4ad5.mp3"},
+            
+            {name: "6377014cb4295614edcdd703b7b45614.mp3", url: "\/music\/mp3\/6377014cb4295614edcdd703b7b45614.mp3"},
+            
+            {name: "PillowTalk - Zayn Malik.mp3", url: "\/music\/mp3\/PillowTalk - Zayn Malik.mp3"},
+            
+            {name: "d39eaf63bc7c7b56cfbf88593561da99.mp3", url: "\/music\/mp3\/d39eaf63bc7c7b56cfbf88593561da99.mp3"},
+            
+            {name: "103e4893310dea891ebdba4506cd90b9.mp3", url: "\/music\/mp3\/103e4893310dea891ebdba4506cd90b9.mp3"},
+            
+            {name: "13f46310c4909ad48a40a0cc3888e868.mp3", url: "\/music\/mp3\/13f46310c4909ad48a40a0cc3888e868.mp3"},
+            
+            {name: "8d3c115b195b2700450d6985b589a46c.mp3", url: "\/music\/mp3\/8d3c115b195b2700450d6985b589a46c.mp3"},
+            
+            {name: "4822063c4aa6d10f9c846b391054a66c.mp3", url: "\/music\/mp3\/4822063c4aa6d10f9c846b391054a66c.mp3"},
+            
+            {name: "8628263052f7ef260f3a5b1c663f4e35.mp3", url: "\/music\/mp3\/8628263052f7ef260f3a5b1c663f4e35.mp3"},
+            
+            {name: "233e5bfeb87716a17589ef5fa62d711b.mp3", url: "\/music\/mp3\/233e5bfeb87716a17589ef5fa62d711b.mp3"},
+            
+            {name: "069aab29f48c40f006ad8537e1f33880.mp3", url: "\/music\/mp3\/069aab29f48c40f006ad8537e1f33880.mp3"},
+            
+            {name: "19107210cb9ad089e7391646f860b8cd.mp3", url: "\/music\/mp3\/19107210cb9ad089e7391646f860b8cd.mp3"},
+            
+            {name: "cc02082611acf77b41cacf4b3468ed9d.mp3", url: "\/music\/mp3\/cc02082611acf77b41cacf4b3468ed9d.mp3"},
+            
+            {name: "38268ff0813d0c2c74715a26bbdb0051.mp3", url: "\/music\/mp3\/38268ff0813d0c2c74715a26bbdb0051.mp3"},
+            
+            {name: "d87d3ac15dafdca1c2d78df19d875aaf.mp3", url: "\/music\/mp3\/d87d3ac15dafdca1c2d78df19d875aaf.mp3"},
+            
+            {name: "8295018a9bdd3ce2d1a8b68010f94485.mp3", url: "\/music\/mp3\/8295018a9bdd3ce2d1a8b68010f94485.mp3"},
+            
+            {name: "cbc863c0e66e061e8ddb68d722a6f937.mp3", url: "\/music\/mp3\/cbc863c0e66e061e8ddb68d722a6f937.mp3"},
+            
+            {name: "79581d91991f19f52625353ed3b245ab.mp3", url: "\/music\/mp3\/79581d91991f19f52625353ed3b245ab.mp3"},
+            
+            {name: "42040d3c55a5857877fa5a3abf84f7b0.mp3", url: "\/music\/mp3\/42040d3c55a5857877fa5a3abf84f7b0.mp3"},
+            
+            {name: "b5e861071dca84360b3b2dad5265f91a.mp3", url: "\/music\/mp3\/b5e861071dca84360b3b2dad5265f91a.mp3"},
+            
+            {name: "3da8afcf34d52f3b836d8a8b42fbea1a.mp3", url: "\/music\/mp3\/3da8afcf34d52f3b836d8a8b42fbea1a.mp3"},
+            
+            {name: "Imagine Dragons - Radioactive.mp3", url: "\/music\/mp3\/Imagine Dragons - Radioactive.mp3"},
+            
+            {name: "b238ac89bc38427a1e189ff3303186a6.mp3", url: "\/music\/mp3\/b238ac89bc38427a1e189ff3303186a6.mp3"},
+            
+            {name: "97d372f3ffac72cf8d7e2e856bea4f1a.mp3", url: "\/music\/mp3\/97d372f3ffac72cf8d7e2e856bea4f1a.mp3"},
+            
+            {name: "11c805bfa2e6e27c4ed51b19cbc408bd.mp3", url: "\/music\/mp3\/11c805bfa2e6e27c4ed51b19cbc408bd.mp3"},
+            
+            {name: "42975b12f0be10315a92b0f7abd07fd2.mp3", url: "\/music\/mp3\/42975b12f0be10315a92b0f7abd07fd2.mp3"},
+            
+            {name: "Extreme - More Than Words.mp3", url: "\/music\/mp3\/Extreme - More Than Words.mp3"},
+            
+            {name: "413b3989b163b1820b74df6feac0c8a3.mp3", url: "\/music\/mp3\/413b3989b163b1820b74df6feac0c8a3.mp3"},
+            
+            {name: "24731ba086c7e77470e21b9896fc140c.mp3", url: "\/music\/mp3\/24731ba086c7e77470e21b9896fc140c.mp3"},
+            
+            {name: "4eb189dd3a905f837b5f1aecc3063fa9.mp3", url: "\/music\/mp3\/4eb189dd3a905f837b5f1aecc3063fa9.mp3"},
+            
+            {name: "60f131f3a3ddf89ee6117ce905da92c5.mp3", url: "\/music\/mp3\/60f131f3a3ddf89ee6117ce905da92c5.mp3"},
+            
+            {name: "366e0459003b224959ecbd7d48c5ac25.mp3", url: "\/music\/mp3\/366e0459003b224959ecbd7d48c5ac25.mp3"},
+            
+            {name: "26cce04a9625ac8ee5c317df49b563a5.mp3", url: "\/music\/mp3\/26cce04a9625ac8ee5c317df49b563a5.mp3"},
+            
+            {name: "5268f193c9d8e3226a4750bf13a27f40.mp3", url: "\/music\/mp3\/5268f193c9d8e3226a4750bf13a27f40.mp3"},
+            
+            {name: "4897be3899dff133cf5d0d5b0a2db0e7.mp3", url: "\/music\/mp3\/4897be3899dff133cf5d0d5b0a2db0e7.mp3"},
+            
+            {name: "23d762bd9dcd118f5dc126c9cf05f6bd.mp3", url: "\/music\/mp3\/23d762bd9dcd118f5dc126c9cf05f6bd.mp3"},
+            
+            {name: "7b0e8b97bf5a3da5bdcbc3ac5cdfe91d.mp3", url: "\/music\/mp3\/7b0e8b97bf5a3da5bdcbc3ac5cdfe91d.mp3"},
+            
+            {name: "8f3244903242c1136d11754734424e22.mp3", url: "\/music\/mp3\/8f3244903242c1136d11754734424e22.mp3"},
+            
+            {name: "Pearl Jam - Just Breathe.mp3", url: "\/music\/mp3\/Pearl Jam - Just Breathe.mp3"},
+            
+            {name: "08c5a28b2b45fa8518c255ec320f7b8a.mp3", url: "\/music\/mp3\/08c5a28b2b45fa8518c255ec320f7b8a.mp3"},
+            
+            {name: "Led Zeppelin-Stairway to Heaven.mp3", url: "\/music\/mp3\/Led Zeppelin-Stairway to Heaven.mp3"},
+            
+            {name: "271e93cfb62aed666c7b4daacdec5ce5.mp3", url: "\/music\/mp3\/271e93cfb62aed666c7b4daacdec5ce5.mp3"},
+            
+            {name: "2db9e574f4e974f8071069d8a474048f.mp3", url: "\/music\/mp3\/2db9e574f4e974f8071069d8a474048f.mp3"},
+            
+            {name: "11ec208774b11be612176b8aa1410281.mp3", url: "\/music\/mp3\/11ec208774b11be612176b8aa1410281.mp3"},
+            
+            {name: "c7ee6204f395d62f78d30a58382caa4c.mp3", url: "\/music\/mp3\/c7ee6204f395d62f78d30a58382caa4c.mp3"},
+            
+            {name: "2afdfbf33c197af9570a5db709a71beb.mp3", url: "\/music\/mp3\/2afdfbf33c197af9570a5db709a71beb.mp3"},
+            
+            {name: "1cbe77365d7bafdf2c6e1c8dd64f1e5c.mp3", url: "\/music\/mp3\/1cbe77365d7bafdf2c6e1c8dd64f1e5c.mp3"},
+            
+            {name: "461516620ddcf6208531d0dcb6c222af.mp3", url: "\/music\/mp3\/461516620ddcf6208531d0dcb6c222af.mp3"},
+            
+            {name: "ad120eddef25a6fd9bf5ea219c50176e.mp3", url: "\/music\/mp3\/ad120eddef25a6fd9bf5ea219c50176e.mp3"},
+            
+            {name: "74ce13f3f1e62e096a0575e51ebe7e88.mp3", url: "\/music\/mp3\/74ce13f3f1e62e096a0575e51ebe7e88.mp3"},
+            
+            {name: "76281b5713225888d2e396b13bce1633.mp3", url: "\/music\/mp3\/76281b5713225888d2e396b13bce1633.mp3"},
+            
+            {name: "9973f43fb4f656a40fd26a4f018d6e2d.mp3", url: "\/music\/mp3\/9973f43fb4f656a40fd26a4f018d6e2d.mp3"},
+            
+            {name: "78f027ad4e662e7160a33fbe01e33a18.mp3", url: "\/music\/mp3\/78f027ad4e662e7160a33fbe01e33a18.mp3"},
+            
+            {name: "b7cbced1ee5eef94118064be0d19a2c4.mp3", url: "\/music\/mp3\/b7cbced1ee5eef94118064be0d19a2c4.mp3"},
+            
+            {name: "3f212188e053b02955b1646e9b9bcc5f.mp3", url: "\/music\/mp3\/3f212188e053b02955b1646e9b9bcc5f.mp3"},
+            
+            {name: "Metallica - One.mp3", url: "\/music\/mp3\/Metallica - One.mp3"},
+            
+            {name: "016f57ad69ad3d909287dd2de53b812b.mp3", url: "\/music\/mp3\/016f57ad69ad3d909287dd2de53b812b.mp3"},
+            
+            {name: "abb57ed789d69bf9a561cd425722ab98.mp3", url: "\/music\/mp3\/abb57ed789d69bf9a561cd425722ab98.mp3"},
+            
+            {name: "859a762f4b92896d4f8d1049352c18be.mp3", url: "\/music\/mp3\/859a762f4b92896d4f8d1049352c18be.mp3"},
+            
+            {name: "The Doors - Riders On The Storm (ORIGINAL!) - driving with Jim.mp3", url: "\/music\/mp3\/The Doors - Riders On The Storm (ORIGINAL!) - driving with Jim.mp3"},
+            
+            {name: "5af4c3575f70a45d334cc0d7bf28ea93.mp3", url: "\/music\/mp3\/5af4c3575f70a45d334cc0d7bf28ea93.mp3"},
+            
+            {name: "d36c5b403041b405042a54ba76420219.mp3", url: "\/music\/mp3\/d36c5b403041b405042a54ba76420219.mp3"},
+            
+            {name: "The Smashing Pumpkins - 1979.mp3", url: "\/music\/mp3\/The Smashing Pumpkins - 1979.mp3"},
+            
+            {name: "5628ef8af7799b2fdd5f5b5df901fc27.mp3", url: "\/music\/mp3\/5628ef8af7799b2fdd5f5b5df901fc27.mp3"},
+            
+            {name: "76c3e2287b70ef7a9fab341727774f75.mp3", url: "\/music\/mp3\/76c3e2287b70ef7a9fab341727774f75.mp3"},
+            
+            {name: "2ae6094d87da2c04da0f8e788aecee05.mp3", url: "\/music\/mp3\/2ae6094d87da2c04da0f8e788aecee05.mp3"},
+            
+            {name: "4c9d9a7810aaab93b9c61100c80a9f25.mp3", url: "\/music\/mp3\/4c9d9a7810aaab93b9c61100c80a9f25.mp3"},
+            
+            {name: "905b9b90145b0fcb104d9a27b8b63e8e.mp3", url: "\/music\/mp3\/905b9b90145b0fcb104d9a27b8b63e8e.mp3"},
+            
+            {name: "0a69eae29ca512cbd4f42f4a6a5a05c1.mp3", url: "\/music\/mp3\/0a69eae29ca512cbd4f42f4a6a5a05c1.mp3"},
+            
+            {name: "Depeche Mode - Strangelove (Remastered Video).mp3", url: "\/music\/mp3\/Depeche Mode - Strangelove (Remastered Video).mp3"},
+            
+            {name: "d099767ba6cc0d4c4269c384458ff18d.mp3", url: "\/music\/mp3\/d099767ba6cc0d4c4269c384458ff18d.mp3"},
+            
+            {name: "c516ebb27dd8d9c2b76a1e0bdea6fa4a.mp3", url: "\/music\/mp3\/c516ebb27dd8d9c2b76a1e0bdea6fa4a.mp3"},
+            
+            {name: "9b988a46101d4fb8178b95a8715148b6.mp3", url: "\/music\/mp3\/9b988a46101d4fb8178b95a8715148b6.mp3"},
+            
+            {name: "The Verve - Bitter Sweet Symphony.mp3", url: "\/music\/mp3\/The Verve - Bitter Sweet Symphony.mp3"},
+            
+            {name: "d1ebf483093ab877477b4917720b15de.mp3", url: "\/music\/mp3\/d1ebf483093ab877477b4917720b15de.mp3"},
+            
+            {name: "ab5f82d6427c6535f27eabc0ef445bbe.mp3", url: "\/music\/mp3\/ab5f82d6427c6535f27eabc0ef445bbe.mp3"},
+            
+            {name: "a76577b0d34296bfde09e9c0fe224f04.mp3", url: "\/music\/mp3\/a76577b0d34296bfde09e9c0fe224f04.mp3"},
+            
+            {name: "OFFICIAL Somewhere over the Rainbow - Israel IZ Kamakawiwo_ole.mp3", url: "\/music\/mp3\/OFFICIAL Somewhere over the Rainbow - Israel IZ Kamakawiwo_ole.mp3"},
+            
+            {name: "8ce497a51f331875ebb1f983a36b4f33.mp3", url: "\/music\/mp3\/8ce497a51f331875ebb1f983a36b4f33.mp3"},
+            
+            {name: "8a6c0e50c280fdccbedd841c49506b82.mp3", url: "\/music\/mp3\/8a6c0e50c280fdccbedd841c49506b82.mp3"},
+            
+            {name: "4f2898f716ff5c621f7d3006c85ee6f7.mp3", url: "\/music\/mp3\/4f2898f716ff5c621f7d3006c85ee6f7.mp3"},
+            
+            {name: "One Dande - Drake.mp3", url: "\/music\/mp3\/One Dande - Drake.mp3"},
+            
+            {name: "65f576cfb51c66169d842c6b740fe117.mp3", url: "\/music\/mp3\/65f576cfb51c66169d842c6b740fe117.mp3"},
+            
+            {name: "2e1fe8b2f7cf6447d791a652a995fe05.mp3", url: "\/music\/mp3\/2e1fe8b2f7cf6447d791a652a995fe05.mp3"},
+            
+            {name: "09b310a2f14566da8cc0c9b710e29dbe.mp3", url: "\/music\/mp3\/09b310a2f14566da8cc0c9b710e29dbe.mp3"},
+            
+            {name: "8f4d2e88508fdc89a010bcb95bab90b0.mp3", url: "\/music\/mp3\/8f4d2e88508fdc89a010bcb95bab90b0.mp3"},
+            
+            {name: "Elvis Presley - If I Can Dream.mp3", url: "\/music\/mp3\/Elvis Presley - If I Can Dream.mp3"},
+            
+            {name: "bef6305b44b6a0e4a4aef9c981ce5d19.mp3", url: "\/music\/mp3\/bef6305b44b6a0e4a4aef9c981ce5d19.mp3"},
+            
+            {name: "Pink Floyd - Wish You Were Here.mp3", url: "\/music\/mp3\/Pink Floyd - Wish You Were Here.mp3"},
+            
+            {name: "Louis Armstrong  What A Wonderful World.mp3", url: "\/music\/mp3\/Louis Armstrong  What A Wonderful World.mp3"},
+            
+            {name: "1674e25ff0b440a3d7df8af2fc996a1a.mp3", url: "\/music\/mp3\/1674e25ff0b440a3d7df8af2fc996a1a.mp3"},
+            
+            {name: "cb7e3e2baec120e9553afb52d08077a9.mp3", url: "\/music\/mp3\/cb7e3e2baec120e9553afb52d08077a9.mp3"},
+            
+            {name: "4d2d53eb4aa22a1da86c873efd85cec4.mp3", url: "\/music\/mp3\/4d2d53eb4aa22a1da86c873efd85cec4.mp3"},
+            
+            {name: "9fd926aa157c1ccbe8e3f3f01416300b.mp3", url: "\/music\/mp3\/9fd926aa157c1ccbe8e3f3f01416300b.mp3"},
+            
+            {name: "The Verve - Rather Be.mp3", url: "\/music\/mp3\/The Verve - Rather Be.mp3"},
+            
+            {name: "54fb4048ec6fa39c62b3e4156e0c3c5f.mp3", url: "\/music\/mp3\/54fb4048ec6fa39c62b3e4156e0c3c5f.mp3"},
+            
+            {name: "05572b3cf82ab084f761f659576dbf96.mp3", url: "\/music\/mp3\/05572b3cf82ab084f761f659576dbf96.mp3"},
+            
+            {name: "b2ff893adf347101e0fd41f9d3b050a0.mp3", url: "\/music\/mp3\/b2ff893adf347101e0fd41f9d3b050a0.mp3"},
+            
+            {name: "Iggy Pop - The Passenger.mp3", url: "\/music\/mp3\/Iggy Pop - The Passenger.mp3"},
+            
+            {name: "7cdb3a4eec1a9feb6259c1b5d249f3b5.mp3", url: "\/music\/mp3\/7cdb3a4eec1a9feb6259c1b5d249f3b5.mp3"},
+            
+            {name: "Oasis - Stand By Me.mp3", url: "\/music\/mp3\/Oasis - Stand By Me.mp3"},
+            
+            {name: "52c60aba980f8c3f880e1fb66b8128dc.mp3", url: "\/music\/mp3\/52c60aba980f8c3f880e1fb66b8128dc.mp3"},
+            
+            {name: "a6aea516e4faa657efe015409a92a925.mp3", url: "\/music\/mp3\/a6aea516e4faa657efe015409a92a925.mp3"},
+            
+            {name: "35facf5018f909b42b0d41d0d9ebf5f4.mp3", url: "\/music\/mp3\/35facf5018f909b42b0d41d0d9ebf5f4.mp3"},
+            
+            {name: "2594aec4f21b354181006a332630228e.mp3", url: "\/music\/mp3\/2594aec4f21b354181006a332630228e.mp3"},
+            
+            {name: "2c9d58bed635167ea902963415d381c1.mp3", url: "\/music\/mp3\/2c9d58bed635167ea902963415d381c1.mp3"},
+            
+            {name: "2ebc4ad177931d491efad524e891efdf.mp3", url: "\/music\/mp3\/2ebc4ad177931d491efad524e891efdf.mp3"},
+            
+            {name: "The camouflage The Great Commandment (1987).mp3", url: "\/music\/mp3\/The camouflage The Great Commandment (1987).mp3"},
+            
+            {name: "93a453137cf62c77a8e6b2223eb946a3.mp3", url: "\/music\/mp3\/93a453137cf62c77a8e6b2223eb946a3.mp3"},
+            
+            {name: "9fa5ad8917be56c35ffbbe2de7a0641f.mp3", url: "\/music\/mp3\/9fa5ad8917be56c35ffbbe2de7a0641f.mp3"},
+            
+            {name: "18ad043c9a672aec2eccba5b3491866d.mp3", url: "\/music\/mp3\/18ad043c9a672aec2eccba5b3491866d.mp3"},
+            
+            {name: "dbab570ca1a437345b05e00ca553870b.mp3", url: "\/music\/mp3\/dbab570ca1a437345b05e00ca553870b.mp3"},
+            
+            {name: "154e6e266b228fd2fa41c7954e4f4b3f.mp3", url: "\/music\/mp3\/154e6e266b228fd2fa41c7954e4f4b3f.mp3"},
+            
+            {name: "a463f39ec81173a99b3fd1ae34957ddd.mp3", url: "\/music\/mp3\/a463f39ec81173a99b3fd1ae34957ddd.mp3"},
+            
+            {name: "A Song For The Lovers - Richard Ashcroft.mp3", url: "\/music\/mp3\/A Song For The Lovers - Richard Ashcroft.mp3"},
+            
+            {name: "11789ac1b7253363adbb7d45139e00d6.mp3", url: "\/music\/mp3\/11789ac1b7253363adbb7d45139e00d6.mp3"},
+            
+            {name: "Blur - Country House.mp3", url: "\/music\/mp3\/Blur - Country House.mp3"},
+            
+            {name: "1bce4811ebe09722e43597b98436bb57.mp3", url: "\/music\/mp3\/1bce4811ebe09722e43597b98436bb57.mp3"},
+            
+            {name: "4ca57f98e18bbddc44e17fe29b75e0a9.mp3", url: "\/music\/mp3\/4ca57f98e18bbddc44e17fe29b75e0a9.mp3"},
+            
+            {name: "37fa1af97d5988e03d82febd020e7676.mp3", url: "\/music\/mp3\/37fa1af97d5988e03d82febd020e7676.mp3"},
+            
+            {name: "095a47e38253e027055dadcdb83abbe2.mp3", url: "\/music\/mp3\/095a47e38253e027055dadcdb83abbe2.mp3"},
+            
+            {name: "4801fb6317d2fdd849e4f33ba6b9d0b5.mp3", url: "\/music\/mp3\/4801fb6317d2fdd849e4f33ba6b9d0b5.mp3"},
+            
+            {name: "1 The Rolling Stones - Paint It Black  HD.mp3", url: "\/music\/mp3\/1 The Rolling Stones - Paint It Black  HD.mp3"},
+            
+            {name: "Guns N\u0027 Roses - Civil War.mp3", url: "\/music\/mp3\/Guns N\u0027 Roses - Civil War.mp3"},
+            
+            {name: "62947d9cf6cd1302096fb4051dd93f9a.mp3", url: "\/music\/mp3\/62947d9cf6cd1302096fb4051dd93f9a.mp3"},
+            
+            {name: "ae222d3c1cdf6eaa08fcd55cb4720098.mp3", url: "\/music\/mp3\/ae222d3c1cdf6eaa08fcd55cb4720098.mp3"},
+            
+            {name: "El Perdon - Nicky Jam.mp3", url: "\/music\/mp3\/El Perdon - Nicky Jam.mp3"},
+            
+            {name: "The Verve - The Drugs Don\u0027t Work.mp3", url: "\/music\/mp3\/The Verve - The Drugs Don\u0027t Work.mp3"},
+            
+            {name: "96762597dc5c3203c57743d8c161e2dd.mp3", url: "\/music\/mp3\/96762597dc5c3203c57743d8c161e2dd.mp3"},
+            
+            {name: "be8dd60847179e94787858971e9ba138.mp3", url: "\/music\/mp3\/be8dd60847179e94787858971e9ba138.mp3"},
+            
+            {name: "Lenny Kravitz, I Belong To You.mp3", url: "\/music\/mp3\/Lenny Kravitz, I Belong To You.mp3"},
+            
+            {name: "30297f82ec4c056704f42bc90a39bcee.mp3", url: "\/music\/mp3\/30297f82ec4c056704f42bc90a39bcee.mp3"},
+            
+            {name: "Eurythmics - Sweet Dreams (Are Made Of This).mp3", url: "\/music\/mp3\/Eurythmics - Sweet Dreams (Are Made Of This).mp3"},
+            
+            {name: "1a1bf55838d59b3d1045f02e2eb53a11.mp3", url: "\/music\/mp3\/1a1bf55838d59b3d1045f02e2eb53a11.mp3"},
+            
+            {name: "6cf2791c3d6b2075cebc374fc1f51581.mp3", url: "\/music\/mp3\/6cf2791c3d6b2075cebc374fc1f51581.mp3"},
+            
+            {name: "c1a429e4436d64c76f54036c772430a8.mp3", url: "\/music\/mp3\/c1a429e4436d64c76f54036c772430a8.mp3"},
+            
+            {name: "53ab956d9906e8b740d3d190ed6d9920.mp3", url: "\/music\/mp3\/53ab956d9906e8b740d3d190ed6d9920.mp3"},
+            
+            {name: "4d718ef664c71ba6ce2e9ecb663d4f7f.mp3", url: "\/music\/mp3\/4d718ef664c71ba6ce2e9ecb663d4f7f.mp3"},
+            
+            {name: "092506e7e51456487087ebb94a2859e8.mp3", url: "\/music\/mp3\/092506e7e51456487087ebb94a2859e8.mp3"},
+            
+            {name: "4fabd29fe4aab62a6390d0b111275e34.mp3", url: "\/music\/mp3\/4fabd29fe4aab62a6390d0b111275e34.mp3"},
+            
+            {name: "271845eb83c948afc4a676fe8ccfc824.mp3", url: "\/music\/mp3\/271845eb83c948afc4a676fe8ccfc824.mp3"},
+            
+            {name: "3152fde76b75e116b31ed525e71c0acd.mp3", url: "\/music\/mp3\/3152fde76b75e116b31ed525e71c0acd.mp3"},
+            
+            {name: "c55c1320fde2a7d3293e8f172f382fb9.mp3", url: "\/music\/mp3\/c55c1320fde2a7d3293e8f172f382fb9.mp3"},
+            
+            {name: "16b71e0abfe0de417c1a4a6f9c9aa1b5.mp3", url: "\/music\/mp3\/16b71e0abfe0de417c1a4a6f9c9aa1b5.mp3"},
+            
+            {name: "Alicia Keys NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/Alicia Keys NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "Harry Styles NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/Harry Styles NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "Toto - Africa.mp3", url: "\/music\/mp3\/Toto - Africa.mp3"},
+            
+            {name: "713131f947efdba04d8e2cfb485fe0d2.mp3", url: "\/music\/mp3\/713131f947efdba04d8e2cfb485fe0d2.mp3"},
+            
+            {name: "566077613d5ece6b14c2d55e3c5c998c.mp3", url: "\/music\/mp3\/566077613d5ece6b14c2d55e3c5c998c.mp3"},
+            
+            {name: "891dc3b2c5e192c88e67dee75ae175fc.mp3", url: "\/music\/mp3\/891dc3b2c5e192c88e67dee75ae175fc.mp3"},
+            
+            {name: "ade3ea332cbaa5186f5be8c4f81c4266.mp3", url: "\/music\/mp3\/ade3ea332cbaa5186f5be8c4f81c4266.mp3"},
+            
+            {name: "64e1b5dad1dbbba1addf1f10544e754a.mp3", url: "\/music\/mp3\/64e1b5dad1dbbba1addf1f10544e754a.mp3"},
+            
+            {name: "616e314dbf5a6e4286e5c473cf0e6242.mp3", url: "\/music\/mp3\/616e314dbf5a6e4286e5c473cf0e6242.mp3"},
+            
+            {name: "7f0cf0ef90a3fce94eb00e88904166e3.mp3", url: "\/music\/mp3\/7f0cf0ef90a3fce94eb00e88904166e3.mp3"},
+            
+            {name: "6e46974edab613adc9d6e90c20076bff.mp3", url: "\/music\/mp3\/6e46974edab613adc9d6e90c20076bff.mp3"},
+            
+            {name: "40e41145294e15bab3d92fb3be65b3c7.mp3", url: "\/music\/mp3\/40e41145294e15bab3d92fb3be65b3c7.mp3"},
+            
+            {name: "7d66824abeb6493fa1d3353478f38e19.mp3", url: "\/music\/mp3\/7d66824abeb6493fa1d3353478f38e19.mp3"},
+            
+            {name: "626d6a7734f180b24dd2dd63c66d76ab.mp3", url: "\/music\/mp3\/626d6a7734f180b24dd2dd63c66d76ab.mp3"},
+            
+            {name: "55dcec5a3c7fa6711c03173711d1ef97.mp3", url: "\/music\/mp3\/55dcec5a3c7fa6711c03173711d1ef97.mp3"},
+            
+            {name: "b2202ded33175a9cef8e85a1738513d7.mp3", url: "\/music\/mp3\/b2202ded33175a9cef8e85a1738513d7.mp3"},
+            
+            {name: "Alice In Chains - Down in a Hole.mp3", url: "\/music\/mp3\/Alice In Chains - Down in a Hole.mp3"},
+            
+            {name: "5d82649bb66ae08db1be38dbeeb33736.mp3", url: "\/music\/mp3\/5d82649bb66ae08db1be38dbeeb33736.mp3"},
+            
+            {name: "Faith No More - Evidence (Official Music Video).mp3", url: "\/music\/mp3\/Faith No More - Evidence (Official Music Video).mp3"},
+            
+            {name: "9d25b37ff97378e313f895c379dbf339.mp3", url: "\/music\/mp3\/9d25b37ff97378e313f895c379dbf339.mp3"},
+            
+            {name: "2e1a93d31b9be0e700330f1d02870600.mp3", url: "\/music\/mp3\/2e1a93d31b9be0e700330f1d02870600.mp3"},
+            
+            {name: "af4d85da7128fd6e40c6e14dc49cfb60.mp3", url: "\/music\/mp3\/af4d85da7128fd6e40c6e14dc49cfb60.mp3"},
+            
+            {name: "73eb1c0700d26e81144d4a33f3651b9a.mp3", url: "\/music\/mp3\/73eb1c0700d26e81144d4a33f3651b9a.mp3"},
+            
+            {name: "Hozier - Take Me To Church.mp3", url: "\/music\/mp3\/Hozier - Take Me To Church.mp3"},
+            
+            {name: "09d94fe0c9c01457e763807bf852c130.mp3", url: "\/music\/mp3\/09d94fe0c9c01457e763807bf852c130.mp3"},
+            
+            {name: "9157e8dbf2938b9b66801e5c10b296c5.mp3", url: "\/music\/mp3\/9157e8dbf2938b9b66801e5c10b296c5.mp3"},
+            
+            {name: "3836a5c8c222e4370189d88357ac2e3e.mp3", url: "\/music\/mp3\/3836a5c8c222e4370189d88357ac2e3e.mp3"},
+            
+            {name: "cfa5d5d0c68bcbd8f35dc5abc64121cb.mp3", url: "\/music\/mp3\/cfa5d5d0c68bcbd8f35dc5abc64121cb.mp3"},
+            
+            {name: "5927b4c3133a35009877d54e72d4feac.mp3", url: "\/music\/mp3\/5927b4c3133a35009877d54e72d4feac.mp3"},
+            
+            {name: "1e2e2ca4c172a45f6e355df34ab91c20.mp3", url: "\/music\/mp3\/1e2e2ca4c172a45f6e355df34ab91c20.mp3"},
+            
+            {name: "Prince, Tom Petty, Steve Winwood, Jeff Lynne and others -- While My Guitar Gently Weeps.mp3", url: "\/music\/mp3\/Prince, Tom Petty, Steve Winwood, Jeff Lynne and others -- While My Guitar Gently Weeps.mp3"},
+            
+            {name: "568826f2c77a10e2487735ebc897f21a.mp3", url: "\/music\/mp3\/568826f2c77a10e2487735ebc897f21a.mp3"},
+            
+            {name: "Real Life - Send Me An Angel (1983).mp3", url: "\/music\/mp3\/Real Life - Send Me An Angel (1983).mp3"},
+            
+            {name: "7938985c4651c74531601e6fe3f9ce0c.mp3", url: "\/music\/mp3\/7938985c4651c74531601e6fe3f9ce0c.mp3"},
+            
+            {name: "c0922823fa01480a0ed38f29a769e35f.mp3", url: "\/music\/mp3\/c0922823fa01480a0ed38f29a769e35f.mp3"},
+            
+            {name: "6fe8374e362a7bc06638d58611be8e98.mp3", url: "\/music\/mp3\/6fe8374e362a7bc06638d58611be8e98.mp3"},
+            
+            {name: "3254071364a801e4c21bf22172e7a384.mp3", url: "\/music\/mp3\/3254071364a801e4c21bf22172e7a384.mp3"},
+            
+            {name: "6a638c835e3d9c97d2852d10d68d77c0.mp3", url: "\/music\/mp3\/6a638c835e3d9c97d2852d10d68d77c0.mp3"},
+            
+            {name: "b6bbd346362aa4a2e325be096d894774.mp3", url: "\/music\/mp3\/b6bbd346362aa4a2e325be096d894774.mp3"},
+            
+            {name: "1e124badfa1fa71e9b1f3cb752be7367.mp3", url: "\/music\/mp3\/1e124badfa1fa71e9b1f3cb752be7367.mp3"},
+            
+            {name: "d700471110533c07cbce421236540fa5.mp3", url: "\/music\/mp3\/d700471110533c07cbce421236540fa5.mp3"},
+            
+            {name: "98492464c3fc5cd39abe0f77764eaf5c.mp3", url: "\/music\/mp3\/98492464c3fc5cd39abe0f77764eaf5c.mp3"},
+            
+            {name: "7e180f87b322b00dbf922d97459c463e.mp3", url: "\/music\/mp3\/7e180f87b322b00dbf922d97459c463e.mp3"},
+            
+            {name: "Natalia Lafourcade NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/Natalia Lafourcade NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "2005cf75dcbf26a58fd070e7d9f64e7c.mp3", url: "\/music\/mp3\/2005cf75dcbf26a58fd070e7d9f64e7c.mp3"},
+            
+            {name: "ad79141956fc9e3c6adc58de259a50e8.mp3", url: "\/music\/mp3\/ad79141956fc9e3c6adc58de259a50e8.mp3"},
+            
+            {name: "29262a9ce4bee913dfa055e8c4a58de7.mp3", url: "\/music\/mp3\/29262a9ce4bee913dfa055e8c4a58de7.mp3"},
+            
+            {name: "R.E.M. - Losing My Religion (Video).mp3", url: "\/music\/mp3\/R.E.M. - Losing My Religion (Video).mp3"},
+            
+            {name: "0c2e146fd66312556e6593c657be91ce.mp3", url: "\/music\/mp3\/0c2e146fd66312556e6593c657be91ce.mp3"},
+            
+            {name: "9caf2e1017b4f797221aeb87fca78312.mp3", url: "\/music\/mp3\/9caf2e1017b4f797221aeb87fca78312.mp3"},
+            
+            {name: "dcf443e02cd1ebeef1557e01de47ce71.mp3", url: "\/music\/mp3\/dcf443e02cd1ebeef1557e01de47ce71.mp3"},
+            
+            {name: "471221f76651e0fa1e649714e384e925.mp3", url: "\/music\/mp3\/471221f76651e0fa1e649714e384e925.mp3"},
+            
+            {name: "49fc77536fa90fda428ad3216ad5d4ac.mp3", url: "\/music\/mp3\/49fc77536fa90fda428ad3216ad5d4ac.mp3"},
+            
+            {name: "16877a41c37b4207baa50800e9aa7148.mp3", url: "\/music\/mp3\/16877a41c37b4207baa50800e9aa7148.mp3"},
+            
+            {name: "Rage Against The Machine - Killing In The Name.mp3", url: "\/music\/mp3\/Rage Against The Machine - Killing In The Name.mp3"},
+            
+            {name: "50f0257fcfa23c53687b5b7bf8a5953b.mp3", url: "\/music\/mp3\/50f0257fcfa23c53687b5b7bf8a5953b.mp3"},
+            
+            {name: "d1bb4f5c646ea7800a867f631cda90be.mp3", url: "\/music\/mp3\/d1bb4f5c646ea7800a867f631cda90be.mp3"},
+            
+            {name: "c473cc683f8facbce19f5393439c7b86.mp3", url: "\/music\/mp3\/c473cc683f8facbce19f5393439c7b86.mp3"},
+            
+            {name: "3c6be2608d3d3d508db5524aa21d200d.mp3", url: "\/music\/mp3\/3c6be2608d3d3d508db5524aa21d200d.mp3"},
+            
+            {name: "858c3314c00967872bd940210510fa46.mp3", url: "\/music\/mp3\/858c3314c00967872bd940210510fa46.mp3"},
+            
+            {name: "0624206fb4eeac8527640309dedf265a.mp3", url: "\/music\/mp3\/0624206fb4eeac8527640309dedf265a.mp3"},
+            
+            {name: "0862fffcec5db29c81ec5afdd09284d8.mp3", url: "\/music\/mp3\/0862fffcec5db29c81ec5afdd09284d8.mp3"},
+            
+            {name: "ad8db93cb7287a1af2ce7f12d1d05926.mp3", url: "\/music\/mp3\/ad8db93cb7287a1af2ce7f12d1d05926.mp3"},
+            
+            {name: "1d5cb10983181975a98b86e02e28f800.mp3", url: "\/music\/mp3\/1d5cb10983181975a98b86e02e28f800.mp3"},
+            
+            {name: "0efb93c36a6a34d793a5fef409fbedbe.mp3", url: "\/music\/mp3\/0efb93c36a6a34d793a5fef409fbedbe.mp3"},
+            
+            {name: "The Cranberries NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/The Cranberries NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "8e53e4caeecd5d33cadf91525221147b.mp3", url: "\/music\/mp3\/8e53e4caeecd5d33cadf91525221147b.mp3"},
+            
+            {name: "d7f795d1088bc6cca384782876310c30.mp3", url: "\/music\/mp3\/d7f795d1088bc6cca384782876310c30.mp3"},
+            
+            {name: "5a8a9285414b54780a73c79b2008d461.mp3", url: "\/music\/mp3\/5a8a9285414b54780a73c79b2008d461.mp3"},
+            
+            {name: "12b0499e5dfa3253bddd78247bf449d2.mp3", url: "\/music\/mp3\/12b0499e5dfa3253bddd78247bf449d2.mp3"},
+            
+            {name: "Daft Punk - Get Lucky (Full Video).mp3", url: "\/music\/mp3\/Daft Punk - Get Lucky (Full Video).mp3"},
+            
+            {name: "d4d507d4b8cc2f3f777b2e034922b60d.mp3", url: "\/music\/mp3\/d4d507d4b8cc2f3f777b2e034922b60d.mp3"},
+            
+            {name: "53bdb05aca8a8de7f536aa1b0ac1c572.mp3", url: "\/music\/mp3\/53bdb05aca8a8de7f536aa1b0ac1c572.mp3"},
+            
+            {name: "INXS - Mystify.mp3", url: "\/music\/mp3\/INXS - Mystify.mp3"},
+            
+            {name: "76bbb44126f0295682e91705ea389e1f.mp3", url: "\/music\/mp3\/76bbb44126f0295682e91705ea389e1f.mp3"},
+            
+            {name: "Elvis Presley - Always On My Mind.mp3", url: "\/music\/mp3\/Elvis Presley - Always On My Mind.mp3"},
+            
+            {name: "7 Years - Lukas Graham.mp3", url: "\/music\/mp3\/7 Years - Lukas Graham.mp3"},
+            
+            {name: "84c5874ac036b710a5a6cad84e0b2eb2.mp3", url: "\/music\/mp3\/84c5874ac036b710a5a6cad84e0b2eb2.mp3"},
+            
+            {name: "c82f484de1e17eeaa58dc4b7c2df91eb.mp3", url: "\/music\/mp3\/c82f484de1e17eeaa58dc4b7c2df91eb.mp3"},
+            
+            {name: "7a6e5a6ae415f6059e60d8edb717b5f1.mp3", url: "\/music\/mp3\/7a6e5a6ae415f6059e60d8edb717b5f1.mp3"},
+            
+            {name: "693f5cc1b9180bdc71f6e2fa79dcc0cb.mp3", url: "\/music\/mp3\/693f5cc1b9180bdc71f6e2fa79dcc0cb.mp3"},
+            
+            {name: "caf0504a799c91c90ae1babebfa4290a.mp3", url: "\/music\/mp3\/caf0504a799c91c90ae1babebfa4290a.mp3"},
+            
+            {name: "404723451113adeda0f7dffa692c35e0.mp3", url: "\/music\/mp3\/404723451113adeda0f7dffa692c35e0.mp3"},
+            
+            {name: "475351e27cbf7a7681dd8f2f9455bce5.mp3", url: "\/music\/mp3\/475351e27cbf7a7681dd8f2f9455bce5.mp3"},
+            
+            {name: "Stone Temple Pilots - Plush (Video).mp3", url: "\/music\/mp3\/Stone Temple Pilots - Plush (Video).mp3"},
+            
+            {name: "6c794d1ece44d3563c06a5c306f69146.mp3", url: "\/music\/mp3\/6c794d1ece44d3563c06a5c306f69146.mp3"},
+            
+            {name: "Morrissey - let me kiss you lyrics.mp3", url: "\/music\/mp3\/Morrissey - let me kiss you lyrics.mp3"},
+            
+            {name: "900a88f792a738b40d85a60c37ba1297.mp3", url: "\/music\/mp3\/900a88f792a738b40d85a60c37ba1297.mp3"},
+            
+            {name: "4b0c3b171fae4df9498d73e3960ae57d.mp3", url: "\/music\/mp3\/4b0c3b171fae4df9498d73e3960ae57d.mp3"},
+            
+            {name: "c274d707e7ebb77ee7503c4fbe01b734.mp3", url: "\/music\/mp3\/c274d707e7ebb77ee7503c4fbe01b734.mp3"},
+            
+            {name: "9443572d0e1fba411950397f40cb3ec2.mp3", url: "\/music\/mp3\/9443572d0e1fba411950397f40cb3ec2.mp3"},
+            
+            {name: "3dff960799ae609d567669dd70bb8b4e.mp3", url: "\/music\/mp3\/3dff960799ae609d567669dd70bb8b4e.mp3"},
+            
+            {name: "R.E.M. - Everybody Hurts (Video).mp3", url: "\/music\/mp3\/R.E.M. - Everybody Hurts (Video).mp3"},
+            
+            {name: "be1cf60fc47bb62bee7bdab76bc365ea.mp3", url: "\/music\/mp3\/be1cf60fc47bb62bee7bdab76bc365ea.mp3"},
+            
+            {name: "bb23ef804dfd623738bd88736e1f8958.mp3", url: "\/music\/mp3\/bb23ef804dfd623738bd88736e1f8958.mp3"},
+            
+            {name: "The Smashing Pumpkins - Tonight, Tonight.mp3", url: "\/music\/mp3\/The Smashing Pumpkins - Tonight, Tonight.mp3"},
+            
+            {name: "d8fb78da970bcccbc5ea8ad36d6dadc4.mp3", url: "\/music\/mp3\/d8fb78da970bcccbc5ea8ad36d6dadc4.mp3"},
+            
+            {name: "6185a89ce72c584d820aca5624e3fce0.mp3", url: "\/music\/mp3\/6185a89ce72c584d820aca5624e3fce0.mp3"},
+            
+            {name: "Lenny Kravitz - Again.mp3", url: "\/music\/mp3\/Lenny Kravitz - Again.mp3"},
+            
+            {name: "3f874fa7378c092226e4465ef499249d.mp3", url: "\/music\/mp3\/3f874fa7378c092226e4465ef499249d.mp3"},
+            
+            {name: "d0c457da05f43013e5e7851519ad5169.mp3", url: "\/music\/mp3\/d0c457da05f43013e5e7851519ad5169.mp3"},
+            
+            {name: "c70956a7753c0de8ff1efe93ff9b3250.mp3", url: "\/music\/mp3\/c70956a7753c0de8ff1efe93ff9b3250.mp3"},
+            
+            {name: "71af2c30c498ce885b8e6273b5416fdf.mp3", url: "\/music\/mp3\/71af2c30c498ce885b8e6273b5416fdf.mp3"},
+            
+            {name: "6e2eef1c465df1ac0655a981f8af4655.mp3", url: "\/music\/mp3\/6e2eef1c465df1ac0655a981f8af4655.mp3"},
+            
+            {name: "8546c8b39ba2dc5116ae4f25ce8e8a9a.mp3", url: "\/music\/mp3\/8546c8b39ba2dc5116ae4f25ce8e8a9a.mp3"},
+            
+            {name: "a1e1370934251d649b312f078370676f.mp3", url: "\/music\/mp3\/a1e1370934251d649b312f078370676f.mp3"},
+            
+            {name: "2 The Rolling Stones - Wild Horses -HQ.mp3", url: "\/music\/mp3\/2 The Rolling Stones - Wild Horses -HQ.mp3"},
+            
+            {name: "dd0176fdc3f79fc143296733332064cc.mp3", url: "\/music\/mp3\/dd0176fdc3f79fc143296733332064cc.mp3"},
+            
+            {name: "028b2422d5feb464e8488163e64e5f3e.mp3", url: "\/music\/mp3\/028b2422d5feb464e8488163e64e5f3e.mp3"},
+            
+            {name: "73c29bb8a2dd64c633afcd418d3950d9.mp3", url: "\/music\/mp3\/73c29bb8a2dd64c633afcd418d3950d9.mp3"},
+            
+            {name: "94c93878a4a5c710e63df108244f0efb.mp3", url: "\/music\/mp3\/94c93878a4a5c710e63df108244f0efb.mp3"},
+            
+            {name: "a262d4493575732f51db82150547c396.mp3", url: "\/music\/mp3\/a262d4493575732f51db82150547c396.mp3"},
+            
+            {name: "35558d82e2a68c7a769c1045b03033a3.mp3", url: "\/music\/mp3\/35558d82e2a68c7a769c1045b03033a3.mp3"},
+            
+            {name: "4ff141d9e2454c363e0cd7d63c39f300.mp3", url: "\/music\/mp3\/4ff141d9e2454c363e0cd7d63c39f300.mp3"},
+            
+            {name: "941896c1c516fd9328ad6cea81ca67bc.mp3", url: "\/music\/mp3\/941896c1c516fd9328ad6cea81ca67bc.mp3"},
+            
+            {name: "0e50fcc51c30ce041b5b8c4d8b23305f.mp3", url: "\/music\/mp3\/0e50fcc51c30ce041b5b8c4d8b23305f.mp3"},
+            
+            {name: "45b01f2257010783e2eb729ec642ae7d.mp3", url: "\/music\/mp3\/45b01f2257010783e2eb729ec642ae7d.mp3"},
+            
+            {name: "80f59f539044c63802236f2efba54a7d.mp3", url: "\/music\/mp3\/80f59f539044c63802236f2efba54a7d.mp3"},
+            
+            {name: "99c173352e04000562132bf9277ce052.mp3", url: "\/music\/mp3\/99c173352e04000562132bf9277ce052.mp3"},
+            
+            {name: "57469f41cf2c7b31d00808b1f3b584cd.mp3", url: "\/music\/mp3\/57469f41cf2c7b31d00808b1f3b584cd.mp3"},
+            
+            {name: "d697b3d83855fe48accb552e2c415dfc.mp3", url: "\/music\/mp3\/d697b3d83855fe48accb552e2c415dfc.mp3"},
+            
+            {name: "4ae095dd2fab0bc2f3b877a20aa1f9c4.mp3", url: "\/music\/mp3\/4ae095dd2fab0bc2f3b877a20aa1f9c4.mp3"},
+            
+            {name: "42d6cd177da2fe8d58c69cdb7c6d18ad.mp3", url: "\/music\/mp3\/42d6cd177da2fe8d58c69cdb7c6d18ad.mp3"},
+            
+            {name: "Sting And Shaggy NPR Music Tiny Desk Concert.mp3", url: "\/music\/mp3\/Sting And Shaggy NPR Music Tiny Desk Concert.mp3"},
+            
+            {name: "57085e275c26a04cfdc3f55cc7788b0f.mp3", url: "\/music\/mp3\/57085e275c26a04cfdc3f55cc7788b0f.mp3"},
+            
+            {name: "Faith No More - I Started A Joke (Official Music Video).mp3", url: "\/music\/mp3\/Faith No More - I Started A Joke (Official Music Video).mp3"},
+            
+            {name: "00b8104df37b9379cac13d81b412e726.mp3", url: "\/music\/mp3\/00b8104df37b9379cac13d81b412e726.mp3"},
+            
+            {name: "c44fe9f602ec7ba1ac66046f006b977b.mp3", url: "\/music\/mp3\/c44fe9f602ec7ba1ac66046f006b977b.mp3"},
+            
+            {name: "61303218409e888280964485c831bc88.mp3", url: "\/music\/mp3\/61303218409e888280964485c831bc88.mp3"},
+            
+            {name: "4454a61e8ee8cf8161f803e1eb285874.mp3", url: "\/music\/mp3\/4454a61e8ee8cf8161f803e1eb285874.mp3"},
+            
+            {name: "611074b785ffb841d372a69276d8ede8.mp3", url: "\/music\/mp3\/611074b785ffb841d372a69276d8ede8.mp3"},
+            
+            {name: "INXS - New Sensation.mp3", url: "\/music\/mp3\/INXS - New Sensation.mp3"},
+            
+            {name: "4fbb091bfeb653ad070966579f80162c.mp3", url: "\/music\/mp3\/4fbb091bfeb653ad070966579f80162c.mp3"},
+            
+            {name: "6460f4235c930decf2d53e5bc0ab7002.mp3", url: "\/music\/mp3\/6460f4235c930decf2d53e5bc0ab7002.mp3"},
+            
+            {name: "Sting - Shape Of My Heart.mp3", url: "\/music\/mp3\/Sting - Shape Of My Heart.mp3"},
+            
+            {name: "3dc7e7bddc11618c7cf9957ac977c063.mp3", url: "\/music\/mp3\/3dc7e7bddc11618c7cf9957ac977c063.mp3"},
+            
+            {name: "4374f6606337131d74d3eeb38ef8d195.mp3", url: "\/music\/mp3\/4374f6606337131d74d3eeb38ef8d195.mp3"},
+            
+            {name: "19538b19cef92da0e6d83af45d625ae6.mp3", url: "\/music\/mp3\/19538b19cef92da0e6d83af45d625ae6.mp3"},
+            
+            {name: "9bd5d238da5c04ee883eeb40b50b84da.mp3", url: "\/music\/mp3\/9bd5d238da5c04ee883eeb40b50b84da.mp3"},
+            
+            {name: "Oasis - Wonderwall.mp3", url: "\/music\/mp3\/Oasis - Wonderwall.mp3"},
+            
+            {name: "9f89a22d167b74b214662f62b7ea27ba.mp3", url: "\/music\/mp3\/9f89a22d167b74b214662f62b7ea27ba.mp3"},
+            
+            {name: "7e52e10b0b8cd92b48ebed7638f8d12e.mp3", url: "\/music\/mp3\/7e52e10b0b8cd92b48ebed7638f8d12e.mp3"},
+            
+            {name: "Chino \u0026 Nacho - Andas En Mi Cabeza (Audio Oficial) Ft. Daddy Yankee.mp3", url: "\/music\/mp3\/Chino \u0026 Nacho - Andas En Mi Cabeza (Audio Oficial) Ft. Daddy Yankee.mp3"},
+            
+            {name: "93bf6694deb5ba1fdc94d86730df68b5.mp3", url: "\/music\/mp3\/93bf6694deb5ba1fdc94d86730df68b5.mp3"},
+            
+            {name: "66090b310f02d038eb2d130718287417.mp3", url: "\/music\/mp3\/66090b310f02d038eb2d130718287417.mp3"},
+            
+            {name: "Bob Marley - Redemption song.mp3", url: "\/music\/mp3\/Bob Marley - Redemption song.mp3"},
+            
+            {name: "Pearl Jam - Do The Evolution.mp3", url: "\/music\/mp3\/Pearl Jam - Do The Evolution.mp3"},
+            
+            {name: "Nirvana - The Man Who Sold The World.mp3", url: "\/music\/mp3\/Nirvana - The Man Who Sold The World.mp3"},
+            
+            {name: "14dde0a0ab9f4e7e82b8f54062972cb3.mp3", url: "\/music\/mp3\/14dde0a0ab9f4e7e82b8f54062972cb3.mp3"},
+            
+            {name: "0a383f54bd72117b48a8c524d7af6057.mp3", url: "\/music\/mp3\/0a383f54bd72117b48a8c524d7af6057.mp3"},
+            
+            {name: "67c1117b1b11f201fe9a8327260e2933.mp3", url: "\/music\/mp3\/67c1117b1b11f201fe9a8327260e2933.mp3"},
+            
+            {name: "9635f76bb1783a81565130646911e2a3.mp3", url: "\/music\/mp3\/9635f76bb1783a81565130646911e2a3.mp3"},
+            
+            {name: "Audioslave - Be Yourself.mp3", url: "\/music\/mp3\/Audioslave - Be Yourself.mp3"},
+            
+            {name: "c1b1db4dbad3e222ecb8d4832fb9ce2a.mp3", url: "\/music\/mp3\/c1b1db4dbad3e222ecb8d4832fb9ce2a.mp3"},
+            
+            {name: "7a337fb90d267315773898146e1c2095.mp3", url: "\/music\/mp3\/7a337fb90d267315773898146e1c2095.mp3"},
+            
+            {name: "Radiohead - Karma Police.mp3", url: "\/music\/mp3\/Radiohead - Karma Police.mp3"},
+            
+            {name: "bedd6e33003f049e47eeccc97776fdbc.mp3", url: "\/music\/mp3\/bedd6e33003f049e47eeccc97776fdbc.mp3"},
+            
+            {name: "U2 - With Or Without You.mp3", url: "\/music\/mp3\/U2 - With Or Without You.mp3"},
+            
+            {name: "312013c7373f1eb1f90abfd41977e666.mp3", url: "\/music\/mp3\/312013c7373f1eb1f90abfd41977e666.mp3"},
+            
+            {name: "9699ba4a5d09795baac687caa51ab1d0.mp3", url: "\/music\/mp3\/9699ba4a5d09795baac687caa51ab1d0.mp3"},
+            
+            {name: "Years \u0026 Years - Desire ft. Tove Lo.mp3", url: "\/music\/mp3\/Years \u0026 Years - Desire ft. Tove Lo.mp3"},
+            
+            {name: "a001c4a40022bf202527226db1118124.mp3", url: "\/music\/mp3\/a001c4a40022bf202527226db1118124.mp3"},
+            
+            {name: "Nirvana - Smells Like Teen Spirit.mp3", url: "\/music\/mp3\/Nirvana - Smells Like Teen Spirit.mp3"},
+            
+            {name: "Frank Sinatra My Way (subtitulado).mp3", url: "\/music\/mp3\/Frank Sinatra My Way (subtitulado).mp3"},
+            
+            {name: "7e9c49d1c3772d4258631088112a1a3c.mp3", url: "\/music\/mp3\/7e9c49d1c3772d4258631088112a1a3c.mp3"},
+            
+            {name: "5c613841dc664902acee7669664ea326.mp3", url: "\/music\/mp3\/5c613841dc664902acee7669664ea326.mp3"},
+            
+            {name: "bd3c9eae5cae5e3431865dddab183632.mp3", url: "\/music\/mp3\/bd3c9eae5cae5e3431865dddab183632.mp3"},
+            
+            {name: "ERASURE LOVE TO HATE YOU.mp3", url: "\/music\/mp3\/ERASURE LOVE TO HATE YOU.mp3"},
+            
+            {name: "927e3e2357e6a702b0d5c43c6db1c9db.mp3", url: "\/music\/mp3\/927e3e2357e6a702b0d5c43c6db1c9db.mp3"},
+            
+            {name: "Dua Lipa Tiny Desk Home Concert.mp3", url: "\/music\/mp3\/Dua Lipa Tiny Desk Home Concert.mp3"},
+            
+            {name: "297a15211c59baf764c83f028a61565a.mp3", url: "\/music\/mp3\/297a15211c59baf764c83f028a61565a.mp3"},
+            
+            {name: "7558162c805a7afc59918c0e7920f558.mp3", url: "\/music\/mp3\/7558162c805a7afc59918c0e7920f558.mp3"},
+            
+            {name: "85cfb102bfff24a92825831f3c3f5ec1.mp3", url: "\/music\/mp3\/85cfb102bfff24a92825831f3c3f5ec1.mp3"},
+            
+            {name: "3 The Rolling Stones - Angie (HQ).mp3", url: "\/music\/mp3\/3 The Rolling Stones - Angie (HQ).mp3"},
+            
+            {name: "356e9443cbb2127b5aa546d46428a1e0.mp3", url: "\/music\/mp3\/356e9443cbb2127b5aa546d46428a1e0.mp3"},
+            
+            {name: "823574fb199fbe726dd32ac2d19296a5.mp3", url: "\/music\/mp3\/823574fb199fbe726dd32ac2d19296a5.mp3"},
+            
+            {name: "1d684f7ee6f51776e6c3c67e690afdac.mp3", url: "\/music\/mp3\/1d684f7ee6f51776e6c3c67e690afdac.mp3"},
+            
+            {name: "8afa1ab6184b655ed133c8906e496681.mp3", url: "\/music\/mp3\/8afa1ab6184b655ed133c8906e496681.mp3"},
+            
+            {name: "The End - Pearl Jam.mp3", url: "\/music\/mp3\/The End - Pearl Jam.mp3"},
+            
+            {name: "c7d20b595af2b74ad0f9a73faa1251ff.mp3", url: "\/music\/mp3\/c7d20b595af2b74ad0f9a73faa1251ff.mp3"},
+            
+            {name: "6c1007d9af8d755578adb8781d5069eb.mp3", url: "\/music\/mp3\/6c1007d9af8d755578adb8781d5069eb.mp3"},
+            
+            {name: "Spin the Black Circle...(Pearl Jam Music Video).mp3", url: "\/music\/mp3\/Spin the Black Circle...(Pearl Jam Music Video).mp3"},
+            
+            {name: "2a333317c1627bacecb413eb96ad1713.mp3", url: "\/music\/mp3\/2a333317c1627bacecb413eb96ad1713.mp3"},
+            
+            {name: "5ddb0068d10f32c139eadf83ede835a4.mp3", url: "\/music\/mp3\/5ddb0068d10f32c139eadf83ede835a4.mp3"},
+            
+            {name: "10755311ca80ca4131e7610a66be14d1.mp3", url: "\/music\/mp3\/10755311ca80ca4131e7610a66be14d1.mp3"},
+            
+            {name: "56e19475465e68ca5acac7d9a879356c.mp3", url: "\/music\/mp3\/56e19475465e68ca5acac7d9a879356c.mp3"},
+            
+            {name: "a0d31d4f0e9262b700d92fe144fb2728.mp3", url: "\/music\/mp3\/a0d31d4f0e9262b700d92fe144fb2728.mp3"},
+            
+            {name: "2e702f48c97b11b29d96f446857b6bd2.mp3", url: "\/music\/mp3\/2e702f48c97b11b29d96f446857b6bd2.mp3"},
+            
+            {name: "7b2ef72fd0d2a3bf0a199492c9e481c2.mp3", url: "\/music\/mp3\/7b2ef72fd0d2a3bf0a199492c9e481c2.mp3"},
+            
+            {name: "The Chainsmokers - Closer (Lyric) ft. Halsey.mp3", url: "\/music\/mp3\/The Chainsmokers - Closer (Lyric) ft. Halsey.mp3"},
+            
+            {name: "9c4dcdcd9b509bb45306e779e623f045.mp3", url: "\/music\/mp3\/9c4dcdcd9b509bb45306e779e623f045.mp3"},
+            
+            {name: "9a5b069c4ef18198eeb10dd0c5f9904a.mp3", url: "\/music\/mp3\/9a5b069c4ef18198eeb10dd0c5f9904a.mp3"},
+            
+            {name: "9fc951566db9424c83c85e8e55a0428a.mp3", url: "\/music\/mp3\/9fc951566db9424c83c85e8e55a0428a.mp3"},
+            
+            {name: "be73d5f068c426f7e3cd754b6ab3ffd8.mp3", url: "\/music\/mp3\/be73d5f068c426f7e3cd754b6ab3ffd8.mp3"},
+            
+            {name: "9b6d5bb338759a77c3b74a15d01b1a31.mp3", url: "\/music\/mp3\/9b6d5bb338759a77c3b74a15d01b1a31.mp3"},
+            
+            {name: "0f97acdce01c4e73715bcdcf8e51d5f3.mp3", url: "\/music\/mp3\/0f97acdce01c4e73715bcdcf8e51d5f3.mp3"},
+            
+            {name: "bf6b5f04d5b66975b10e6ac2f6c58283.mp3", url: "\/music\/mp3\/bf6b5f04d5b66975b10e6ac2f6c58283.mp3"},
+            
+            {name: "Jamiroquai - Virtual Insanity.mp3", url: "\/music\/mp3\/Jamiroquai - Virtual Insanity.mp3"},
+            
+            {name: "Audioslave - Like A Stone.mp3", url: "\/music\/mp3\/Audioslave - Like A Stone.mp3"},
+            
+            {name: "1e64a9be70b76e5c00fbaa7f66ba7131.mp3", url: "\/music\/mp3\/1e64a9be70b76e5c00fbaa7f66ba7131.mp3"},
+            
+            {name: "ccb2f7f33c0385f0b2b361b84fc94baa.mp3", url: "\/music\/mp3\/ccb2f7f33c0385f0b2b361b84fc94baa.mp3"},
+            
+            {name: "2b1d14beca9c75274ece3b32a78afd02.mp3", url: "\/music\/mp3\/2b1d14beca9c75274ece3b32a78afd02.mp3"},
+            
+            {name: "1ea35075990d16b1ec72fe3589c01991.mp3", url: "\/music\/mp3\/1ea35075990d16b1ec72fe3589c01991.mp3"},
+            
+            {name: "Pearl Jam-Black.mp3", url: "\/music\/mp3\/Pearl Jam-Black.mp3"},
+            
+            {name: "6c4e15cecac63dc268bfed2c3529d149.mp3", url: "\/music\/mp3\/6c4e15cecac63dc268bfed2c3529d149.mp3"},
+            
+            {name: "2ed0a9e9a7ca6235b708a411e11685b5.mp3", url: "\/music\/mp3\/2ed0a9e9a7ca6235b708a411e11685b5.mp3"},
+            
+            {name: "Freddie Mercury _ QUEEN _  RAPSODIA BOHEMIA.mp3", url: "\/music\/mp3\/Freddie Mercury _ QUEEN _  RAPSODIA BOHEMIA.mp3"},
+            
+            {name: "Sting - Englishman In New York.mp3", url: "\/music\/mp3\/Sting - Englishman In New York.mp3"},
+            
+            {name: "68713c113e63d7d419df8c86c922d174.mp3", url: "\/music\/mp3\/68713c113e63d7d419df8c86c922d174.mp3"},
+            
+            {name: "a359f72e72c0864c0e9e4b7d38305dcb.mp3", url: "\/music\/mp3\/a359f72e72c0864c0e9e4b7d38305dcb.mp3"},
+            
+            {name: "John Lennon - Imagine.mp3", url: "\/music\/mp3\/John Lennon - Imagine.mp3"},
+            
+            {name: "902f2e168c9f484a585aafac67129b33.mp3", url: "\/music\/mp3\/902f2e168c9f484a585aafac67129b33.mp3"},
+            
+            {name: "6afa7a6f78ba7a066a69452ed2572789.mp3", url: "\/music\/mp3\/6afa7a6f78ba7a066a69452ed2572789.mp3"},
+            
+            {name: "Candlebox - Cover Me.mp3", url: "\/music\/mp3\/Candlebox - Cover Me.mp3"},
+            
+            {name: "Bob Marley-no woman no cry.mp3", url: "\/music\/mp3\/Bob Marley-no woman no cry.mp3"},
+            
+            {name: "09294d2feba3fa4e15f4c311988f45b9.mp3", url: "\/music\/mp3\/09294d2feba3fa4e15f4c311988f45b9.mp3"},
+            
+            {name: "2bcbb1272e139c8330b713a440f25626.mp3", url: "\/music\/mp3\/2bcbb1272e139c8330b713a440f25626.mp3"},
+            
+            {name: "618df33ddd3799cb49c8ae0ed6de537e.mp3", url: "\/music\/mp3\/618df33ddd3799cb49c8ae0ed6de537e.mp3"},
+            
+            {name: "3faf985682a3274f1b3e340214d5191e.mp3", url: "\/music\/mp3\/3faf985682a3274f1b3e340214d5191e.mp3"},
+            
+            {name: "8df1ec05502cc45a9bc98ec24b9289ce.mp3", url: "\/music\/mp3\/8df1ec05502cc45a9bc98ec24b9289ce.mp3"},
+            
+            {name: "40c1a0f81820c0b058dd269b09816d30.mp3", url: "\/music\/mp3\/40c1a0f81820c0b058dd269b09816d30.mp3"},
+            
+            {name: "I will survive - Gloria Gaynor.mp3", url: "\/music\/mp3\/I will survive - Gloria Gaynor.mp3"},
+            
+            {name: "8bf8e997e983ba3a603dbfe9da99915c.mp3", url: "\/music\/mp3\/8bf8e997e983ba3a603dbfe9da99915c.mp3"},
+            
+            {name: "Strangers in The Night - Frank Sinatra.mp3", url: "\/music\/mp3\/Strangers in The Night - Frank Sinatra.mp3"},
+            
+            {name: "a229613f24254f492493a2c080975342.mp3", url: "\/music\/mp3\/a229613f24254f492493a2c080975342.mp3"},
+            
+            {name: "Alice in Chains - Nutshell.mp3", url: "\/music\/mp3\/Alice in Chains - Nutshell.mp3"},
+            
+            {name: "dd47ef9c8f5268ccb9ccd075050ed987.mp3", url: "\/music\/mp3\/dd47ef9c8f5268ccb9ccd075050ed987.mp3"},
+            
+            {name: "40159bcf32a20e3431efc7a371507519.mp3", url: "\/music\/mp3\/40159bcf32a20e3431efc7a371507519.mp3"},
+            
+            {name: "Blur - Girls And Boys.mp3", url: "\/music\/mp3\/Blur - Girls And Boys.mp3"},
+            
+            {name: "System Of A Down - Chop Suey!.mp3", url: "\/music\/mp3\/System Of A Down - Chop Suey!.mp3"},
+            
+            {name: "98443fcd954abb00397f263ef78e5077.mp3", url: "\/music\/mp3\/98443fcd954abb00397f263ef78e5077.mp3"},
+            
+            {name: "beb3681a8cc5697a644c43aff471db37.mp3", url: "\/music\/mp3\/beb3681a8cc5697a644c43aff471db37.mp3"},
+            
+            {name: "be8bab8a9ae5b3b729fb3669bd2b8b0c.mp3", url: "\/music\/mp3\/be8bab8a9ae5b3b729fb3669bd2b8b0c.mp3"},
+            
+            {name: "1cdc0ad847468e5c76c5ca64aa9b9ac2.mp3", url: "\/music\/mp3\/1cdc0ad847468e5c76c5ca64aa9b9ac2.mp3"},
+            
+            {name: "a5908a3538fccbfb9da952329585178a.mp3", url: "\/music\/mp3\/a5908a3538fccbfb9da952329585178a.mp3"},
+            
+            {name: "35568adc43bd66c4e8b0ca10258e95b3.mp3", url: "\/music\/mp3\/35568adc43bd66c4e8b0ca10258e95b3.mp3"},
+            
+            {name: "98d035ff9da908d8c1cda5456d393fd3.mp3", url: "\/music\/mp3\/98d035ff9da908d8c1cda5456d393fd3.mp3"},
+            
+            {name: "c13ddde8e77c298507224ec935962f6f.mp3", url: "\/music\/mp3\/c13ddde8e77c298507224ec935962f6f.mp3"},
+            
+            {name: "Suedehead • Morrissey.mp3", url: "\/music\/mp3\/Suedehead • Morrissey.mp3"},
+            
+            {name: "In This Shirt - The Irrepressibles.mp3", url: "\/music\/mp3\/In This Shirt - The Irrepressibles.mp3"},
+            
+            {name: "80a47d0877430561e3b7a9061738831e.mp3", url: "\/music\/mp3\/80a47d0877430561e3b7a9061738831e.mp3"},
+            
+            {name: "5e52ef6c2e103832c2bb94c47c0ac887.mp3", url: "\/music\/mp3\/5e52ef6c2e103832c2bb94c47c0ac887.mp3"},
+            
+            {name: "842df5a6dfdd4d5dd3e2bef12bc9efb4.mp3", url: "\/music\/mp3\/842df5a6dfdd4d5dd3e2bef12bc9efb4.mp3"},
+            
+            {name: "56ce4e29ef705f64e8388c5a0f4707a9.mp3", url: "\/music\/mp3\/56ce4e29ef705f64e8388c5a0f4707a9.mp3"},
+            
+            {name: "a8629a2492944e3976af1a0e5f33987e.mp3", url: "\/music\/mp3\/a8629a2492944e3976af1a0e5f33987e.mp3"},
+            
+            {name: "5fbc1c21a9306358732e20f42e2a441d.mp3", url: "\/music\/mp3\/5fbc1c21a9306358732e20f42e2a441d.mp3"},
+            
+            {name: "7290f65f7dc847e8bc0f0ea08c4a9226.mp3", url: "\/music\/mp3\/7290f65f7dc847e8bc0f0ea08c4a9226.mp3"},
+            
+            {name: "9477f77f0dcd4de3e28db4e43872c0b4.mp3", url: "\/music\/mp3\/9477f77f0dcd4de3e28db4e43872c0b4.mp3"},
+            
+            {name: "5b41b2662bdd8d4305fd7cf9310bdb8f.mp3", url: "\/music\/mp3\/5b41b2662bdd8d4305fd7cf9310bdb8f.mp3"},
+            
+            {name: "06115c49c095ed12acd4b75af0840c51.mp3", url: "\/music\/mp3\/06115c49c095ed12acd4b75af0840c51.mp3"},
+            
+            {name: "3ca0b5c59fc4624ca4cecdacc48482e9.mp3", url: "\/music\/mp3\/3ca0b5c59fc4624ca4cecdacc48482e9.mp3"},
+            
+            {name: "c770dfe1c35211d499b21cc81f713aed.mp3", url: "\/music\/mp3\/c770dfe1c35211d499b21cc81f713aed.mp3"},
+            
+            {name: "bc47c12972473a12356ec9566171d6ca.mp3", url: "\/music\/mp3\/bc47c12972473a12356ec9566171d6ca.mp3"},
+            
+            {name: "b37b7154a877563bcf2fdc4ccca6f097.mp3", url: "\/music\/mp3\/b37b7154a877563bcf2fdc4ccca6f097.mp3"},
+            
+            {name: "98e7d8287c4691dfd6105391b492be0f.mp3", url: "\/music\/mp3\/98e7d8287c4691dfd6105391b492be0f.mp3"},
+            
+            {name: "2947f1619dda6a5e6c15e96543e574b5.mp3", url: "\/music\/mp3\/2947f1619dda6a5e6c15e96543e574b5.mp3"},
+            
+            {name: "3ad9e7566c52fde8d2aa71044d0347b2.mp3", url: "\/music\/mp3\/3ad9e7566c52fde8d2aa71044d0347b2.mp3"},
+            
+            {name: "7387d226178c6784af0724218e66ed9b.mp3", url: "\/music\/mp3\/7387d226178c6784af0724218e66ed9b.mp3"},
+            
+            {name: "09d1b4f283799215d43b6aff12359ba1.mp3", url: "\/music\/mp3\/09d1b4f283799215d43b6aff12359ba1.mp3"},
+            
+            {name: "4cec9878bddefd63357aeac973100faf.mp3", url: "\/music\/mp3\/4cec9878bddefd63357aeac973100faf.mp3"},
+            
+            {name: "654d45cddf935cfc80b857f9c0e8d3f5.mp3", url: "\/music\/mp3\/654d45cddf935cfc80b857f9c0e8d3f5.mp3"},
+            
         ];
 
         const audio = document.querySelector('#audio');
@@ -201,7 +1284,7 @@
                 songArtista.textContent="Cargando..."
                 songTitle.textContent = song.name;
                 
-                jsmediatags.read("https://mp3.ivacker.dev/mp3/"+song.name, {
+                jsmediatags.read("https://evol.cl/music/mp3/"+song.name, {
                     onSuccess: function(tag) {
                     console.log(tag)
                     document.title="🎶 "+ tag.tags.title + " > " + tag.tags.artist;
